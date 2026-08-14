@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Control Portal | ABILITY</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-body">
+
+    <!-- ================= BACKGROUND PARTICLES ================= -->
+    <div class="background-grid"></div>
+
+    <!-- ================= AUTHENTICATION MODAL ================= -->
+    <div id="authModal" class="auth-modal-overlay">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <img src="assets/images/logo.png" alt="ABILITY Logo">
+                <h2>ABILITY <span>Portal</span></h2>
+            </div>
+            <p class="auth-subtitle">Restricted Administrative Workspace</p>
+
+            <form id="adminLoginForm" class="auth-form">
+                <div class="input-group">
+                    <label for="adminEmail">Admin Email ID</label>
+                    <input type="email" id="adminEmail" placeholder="abilityofficial.2026@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="adminPasscode">Security Passcode</label>
+                    <input type="password" id="adminPasscode" placeholder="••••••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Authenticate Access</button>
+            </form>
+            <p id="authErrorMsg" class="auth-error-msg" style="display:none;">⚠️ Invalid credentials or unauthorized email address.</p>
+        </div>
+    </div>
+
+    <!-- ================= MAIN DASHBOARD WRAPPER ================= -->
+    <div id="dashboardWrapper" class="dashboard-wrapper" style="display: none;">
+        
+        <!-- DASHBOARD TOP BAR -->
+        <header class="admin-header">
+            <div class="admin-brand">
+                <img src="assets/images/logo.png" alt="Logo">
+                <span>ABILITY Control Hub <code>v2.0</code></span>
+            </div>
+            <div class="admin-user-info">
+                <span class="user-badge master">Master Administrator</span>
+                <span id="loggedInEmail" class="user-email">abilityofficial.2026@gmail.com</span>
+                <button id="logoutBtn" class="btn btn-outline btn-small">Logout</button>
+            </div>
+        </header>
+
+        <div class="admin-main-grid">
+            
+            <!-- SIDEBAR TABS -->
+            <aside class="admin-sidebar">
+                <ul class="admin-menu">
+                    <li class="active" data-tab="registrationsTab">📋 Registrations Feed</li>
+                    <li data-tab="teamManagerTab">👥 Leadership Manager</li>
+                    <li data-tab="eventControllerTab">🚨 Event Controller</li>
+                </ul>
+            </aside>
+
+            <!-- WORKSPACE -->
+            <main class="admin-workspace">
+                
+                <!-- SUMMARY METRICS -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span>Total Registrations</span>
+                        <h3 id="statTotalReg">0</h3>
+                    </div>
+                    <div class="metric-card gold">
+                        <span>Pending Verification</span>
+                        <h3 id="statPendingReg">0</h3>
+                    </div>
+                    <div class="metric-card green">
+                        <span>Confirmed Participants</span>
+                        <h3 id="statConfirmedReg">0</h3>
+                    </div>
+                </div>
+
+                <!-- TAB 1: REGISTRATIONS FEED -->
+                <section id="registrationsTab" class="dashboard-tab-content active">
+                    <div class="tab-header-controls">
+                        <h2>Event Registrations</h2>
+                        <div class="control-actions">
+                            <input type="text" id="searchStudentInput" placeholder="Search by name, phone, or TrxID..." class="search-input">
+                            <select id="filterBatchSelect" class="filter-select">
+                                <option value="ALL">All Batches</option>
+                                <option value="Class 8">Class 8</option>
+                                <option value="Class 9">Class 9</option>
+                                <option value="Class 10">Class 10</option>
+                                <option value="HSC 1st Year">HSC 1st Year</option>
+                                <option value="HSC 2nd Year">HSC 2nd Year</option>
+                            </select>
+                            <button id="exportCsvBtn" class="btn btn-outline btn-small">📥 Export CSV</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Full Name</th>
+                                    <th>Batch</th>
+                                    <th>Institution</th>
+                                    <th>Segment</th>
+                                    <th>Sender & TrxID</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="registrationsTableBody">
+                                <tr>
+                                    <td colspan="8" class="text-center text-muted" style="padding: 24px; text-align: center;">Connecting to live database...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- TAB 2: TEAM MANAGER -->
+                <section id="teamManagerTab" class="dashboard-tab-content" style="display: none;">
+                    <h2>Team & Leadership Manager</h2>
+                    <p class="section-subtext">Add new committee members or volunteers to the database.</p>
+                    
+                    <form id="addTeamMemberForm" class="admin-form-card" style="margin-top: 20px;">
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label>Member Full Name</label>
+                                <input type="text" placeholder="e.g. Tanvir Ahmed" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Designation / Role</label>
+                                <input type="text" placeholder="e.g. Executive Organizer" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Wing / Department</label>
+                                <select>
+                                    <option value="Executive Committee">Executive Committee</option>
+                                    <option value="Media & IT Wing">Media & IT Wing</option>
+                                    <option value="Event Operations">Event Operations</option>
+                                    <option value="Volunteer">Volunteer Wing</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Photo URL / Asset Path</label>
+                                <input type="text" placeholder="assets/images/team/member1.jpg">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Add Member</button>
+                    </form>
+                </section>
+
+                <!-- TAB 3: EVENT CONTROLLER -->
+                <section id="eventControllerTab" class="dashboard-tab-content" style="display: none;">
+                    <h2>Homepage Notice & Event Controller</h2>
+                    <p class="section-subtext">Update active event banners across the website.</p>
+                    
+                    <form id="eventControlForm" class="admin-form-card" style="margin-top: 20px;">
+                        <div class="form-grid">
+                            <div class="input-group full-width">
+                                <label>Event Title</label>
+                                <input type="text" value="ABILITY English Championship 2026">
+                            </div>
+                            <div class="input-group">
+                                <label>Event Date</label>
+                                <input type="text" value="September 12, 2026">
+                            </div>
+                            <div class="input-group">
+                                <label>Registration Status</label>
+                                <select>
+                                    <option value="OPEN">🔴 REGISTRATION OPEN</option>
+                                    <option value="CLOSED">🔒 REGISTRATION CLOSED</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Save Settings</button>
+                    </form>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

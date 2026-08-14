@@ -2797,3 +2797,241 @@ REGISTRATION FORM STYLES
 .registration-note-card strong {
   color: #ffffff;
 }
+/* ====================================================
+   ADMIN DASHBOARD CSS
+==================================================== */
+.admin-body {
+  background: #040a14 !important;
+  color: #ffffff;
+}
+
+.auth-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 10, 20, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(16, 27, 45, 0.9);
+  border: 1px solid rgba(245, 193, 93, 0.35);
+  border-radius: 20px;
+  padding: 36px 30px;
+  text-align: center;
+}
+
+.auth-logo img {
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.auth-logo h2 {
+  font-size: 1.6rem;
+}
+
+.auth-logo h2 span {
+  color: var(--gold, #f5c15d);
+}
+
+.auth-subtitle {
+  font-size: 13px;
+  color: #8a9bb5;
+  margin-bottom: 22px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.auth-error-msg {
+  font-size: 12.5px;
+  color: #ef4444;
+  margin-top: 12px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  background: rgba(10, 20, 36, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.admin-brand img {
+  width: 32px;
+}
+
+.user-badge.master {
+  background: rgba(245, 193, 93, 0.15);
+  color: var(--gold, #f5c15d);
+  border: 1px solid rgba(245, 193, 93, 0.3);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #8a9bb5;
+  margin: 0 10px;
+}
+
+.admin-main-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - 65px);
+}
+
+.admin-sidebar {
+  background: rgba(7, 17, 31, 0.9);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 16px;
+}
+
+.admin-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-menu li {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #8a9bb5;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-menu li:hover,
+.admin-menu li.active {
+  background: rgba(37, 99, 255, 0.15);
+  color: #ffffff;
+  border-left: 3px solid var(--gold, #f5c15d);
+}
+
+.admin-workspace {
+  padding: 28px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.metric-card {
+  background: rgba(16, 27, 45, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.metric-card span {
+  font-size: 12px;
+  color: #8a9bb5;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.metric-card h3 {
+  font-size: 2rem;
+  margin-top: 4px;
+  color: #ffffff;
+}
+
+.metric-card.gold h3 { color: var(--gold, #f5c15d); }
+.metric-card.green h3 { color: #22c55e; }
+
+.tab-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.control-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input, .filter-select {
+  padding: 8px 12px;
+  background: rgba(7, 17, 31, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+  background: rgba(16, 27, 45, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.data-table th {
+  background: rgba(10, 20, 36, 0.95);
+  padding: 12px 16px;
+  color: var(--gold, #f5c15d);
+  font-weight: 700;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+}
+
+.admin-form-card {
+  background: rgba(16, 27, 45, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 700px;
+}
+
+@media (max-width: 900px) {
+  .admin-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
