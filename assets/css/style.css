@@ -2753,3 +2753,47 @@ REGISTRATION FORM STYLES
     max-width: 360px;
   }
 }
+/* ====================================================
+   TOP SPACING FIX FOR REGISTER & CHAMPIONSHIP PAGES (MOBILE)
+==================================================== */
+@media (max-width: 992px) {
+  /* Give proper top clearance so the navbar doesn't cover headings */
+  .registration-section,
+  .championship-hero,
+  .event-details-section,
+  main {
+    padding-top: 110px !important;
+  }
+}
+
+/* ====================================================
+   REGISTRATION NOTE CARD STYLING
+==================================================== */
+.registration-note-card {
+  margin-top: 24px;
+  background: rgba(245, 193, 93, 0.06);
+  border: 1px solid rgba(245, 193, 93, 0.25);
+  border-radius: 14px;
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.note-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold, #f5c15d);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.registration-note-card p {
+  font-size: 13.5px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.registration-note-card strong {
+  color: #ffffff;
+}
