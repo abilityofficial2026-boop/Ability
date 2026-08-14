@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 900 900"
+width="900"
+height="900">
+
+<defs>
+
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0A1730"/>
+<stop offset="100%" stop-color="#081221"/>
+</linearGradient>
+
+<radialGradient id="blueGlow"
+cx="50%"
+cy="45%"
+r="55%">
+
+<stop offset="0%"
+stop-color="#4F86FF"
+stop-opacity=".28"/>
+
+<stop offset="100%"
+stop-color="#4F86FF"
+stop-opacity="0"/>
+
+</radialGradient>
+
+<filter id="blur20">
+<feGaussianBlur stdDeviation="20"/>
+</filter>
+
+<filter id="blur8">
+<feGaussianBlur stdDeviation="8"/>
+</filter>
+
+<filter id="blur3">
+<feGaussianBlur stdDeviation="3"/>
+</filter>
+
+</defs>
+
+<rect
+width="900"
+height="900"
+fill="url(#bg)"/>
+
+<circle
+cx="450"
+cy="455"
+r="300"
+fill="url(#blueGlow)"
+filter="url(#blur20)"/>
+
+<!-- decorative grid -->
+
+<g opacity=".05">
+
+<path d="M100 0V900"
+stroke="#ffffff"/>
+
+<path d="M200 0V900"
+stroke="#ffffff"/>
+
+<path d="M300 0V900"
+stroke="#ffffff"/>
+
+<path d="M400 0V900"
+stroke="#ffffff"/>
+
+<path d="M500 0V900"
+stroke="#ffffff"/>
+
+<path d="M600 0V900"
+stroke="#ffffff"/>
+
+<path d="M700 0V900"
+stroke="#ffffff"/>
+
+<path d="M800 0V900"
+stroke="#ffffff"/>
+
+<path d="M0 100H900"
+stroke="#ffffff"/>
+
+<path d="M0 200H900"
+stroke="#ffffff"/>
+
+<path d="M0 300H900"
+stroke="#ffffff"/>
+
+<path d="M0 400H900"
+stroke="#ffffff"/>
+
+<path d="M0 500H900"
+stroke="#ffffff"/>
+
+<path d="M0 600H900"
+stroke="#ffffff"/>
+
+<path d="M0 700H900"
+stroke="#ffffff"/>
+
+<path d="M0 800H900"
+stroke="#ffffff"/>
+
+</g>
+<!-- =========================
+BANGLADESH MAP
+========================= -->
+
+<g id="bangladesh">
+
+<path
+d="
+M442 185
+L404 220
+L388 275
+L402 330
+L385 382
+L396 440
+L374 495
+L388 555
+L420 620
+L462 690
+L505 725
+L548 705
+L582 650
+L608 585
+L602 520
+L575 455
+L558 395
+L528 350
+L545 292
+L518 235
+L480 198
+Z"
+
+fill="#2956E8"
+stroke="#8FC1FF"
+stroke-width="3"/>
+
+</g>
+
+<!-- central glow -->
+
+<circle
+cx="474"
+cy="420"
+r="16"
+fill="#FFD45D"/>
+
+<circle
+cx="474"
+cy="420"
+r="48"
+fill="#4F86FF"
+opacity=".35"
+filter="url(#blur8)"/>
+
+<!-- Dhaka -->
+
+<circle
+cx="474"
+cy="420"
+r="5"
+fill="#ffffff"/>
+
+<text
+x="494"
+y="404"
+fill="white"
+font-size="18"
+font-family="Inter"
+font-weight="700">
+
+Dhaka
+
+</text>
+
+<!-- district nodes -->
+
+<g fill="#8EC3FF">
+
+<circle cx="430" cy="290" r="4"/>
+<circle cx="515" cy="300" r="4"/>
+<circle cx="555" cy="355" r="4"/>
+<circle cx="565" cy="470" r="4"/>
+<circle cx="525" cy="585" r="4"/>
+<circle cx="455" cy="610" r="4"/>
+<circle cx="405" cy="520" r="4"/>
+<circle cx="395" cy="380" r="4"/>
+<circle cx="450" cy="345" r="4"/>
+<circle cx="500" cy="505" r="4"/>
+
+</g>
+
+<!-- glowing hubs -->
+
+<g>
+
+<circle
+cx="430"
+cy="290"
+r="12"
+fill="#6CA8FF"
+opacity=".25"
+filter="url(#blur8)"/>
+
+<circle
+cx="565"
+cy="470"
+r="12"
+fill="#6CA8FF"
+opacity=".25"
+filter="url(#blur8)"/>
+
+<circle
+cx="455"
+cy="610"
+r="12"
+fill="#6CA8FF"
+opacity=".25"
+filter="url(#blur8)"/>
+
+<circle
+cx="515"
+cy="300"
+r="12"
+fill="#6CA8FF"
+opacity=".25"
+filter="url(#blur8)"/>
+
+</g>
+<!-- =========================
+ABILITY CENTRAL NODE
+========================= -->
+
+<g id="ability-node">
+
+<circle
+cx="450"
+cy="105"
+r="48"
+fill="#132A60"
+stroke="#4F86FF"
+stroke-width="3"/>
+
+<circle
+cx="450"
+cy="105"
+r="63"
+fill="none"
+stroke="#F4C84A"
+stroke-width="1.5"
+opacity=".55"/>
+
+<circle
+cx="450"
+cy="105"
+r="78"
+fill="none"
+stroke="#4F86FF"
+stroke-width="1"
+opacity=".15"/>
+
+<text
+x="450"
+y="111"
+text-anchor="middle"
+fill="white"
+font-size="24"
+font-family="Inter"
+font-weight="800">
+
+ABILITY
+
+</text>
+
+</g>
+
+<!-- main connection -->
+
+<path
+d="M450 152
+L450 365"
+
+stroke="#F4C84A"
+stroke-width="3"
+fill="none"/>
+
+<!-- NATIONAL NETWORK CURVES -->
+
+<g
+stroke="#6EA6FF"
+stroke-width="2"
+fill="none"
+opacity=".75">
+
+<path d="M450 420
+Q365 355 305 285"/>
+
+<path d="M450 420
+Q565 340 675 300"/>
+
+<path d="M450 420
+Q340 485 275 610"/>
+
+<path d="M450 420
+Q590 500 640 635"/>
+
+<path d="M450 420
+Q455 300 430 290"/>
+
+<path d="M450 420
+Q535 360 515 300"/>
+
+<path d="M450 420
+Q575 455 565 470"/>
+
+<path d="M450 420
+Q515 545 525 585"/>
+
+<path d="M450 420
+Q395 500 405 520"/>
+
+<path d="M450 420
+Q370 380 395 380"/>
+
+</g>
+
+<!-- travelling particles -->
+
+<g fill="#FFD24D">
+
+<circle cx="410" cy="380" r="4"/>
+<circle cx="510" cy="435" r="4"/>
+<circle cx="540" cy="570" r="4"/>
+<circle cx="390" cy="560" r="4"/>
+<circle cx="470" cy="250" r="4"/>
+
+</g>
+
+<!-- glowing stars -->
+
+<g fill="#A8CFFF">
+
+<circle cx="185" cy="150" r="2"/>
+<circle cx="235" cy="120" r="2"/>
+<circle cx="670" cy="165" r="2"/>
+<circle cx="720" cy="235" r="2"/>
+<circle cx="685" cy="715" r="2"/>
+<circle cx="205" cy="705" r="2"/>
+<circle cx="640" cy="360" r="2"/>
+<circle cx="270" cy="630" r="2"/>
+<circle cx="520" cy="760" r="2"/>
+<circle cx="350" cy="190" r="2"/>
+
+</g>
+<!-- =========================
+EDUCATION ECOSYSTEM
+========================= -->
+
+<!-- LEFT TOP -->
+
+<g>
+
+<circle
+cx="170"
+cy="235"
+r="34"
+fill="#17336E"
+stroke="#5A93FF"
+stroke-width="2"/>
+
+<path
+d="M156 242
+L170 230
+L184 242
+V256
+H156
+Z"
+
+fill="white"/>
+
+<path
+d="M170 226
+L188 240"
+
+stroke="#FFD45D"
+stroke-width="2"
+stroke-linecap="round"/>
+
+</g>
+
+<!-- RIGHT TOP -->
+
+<g>
+
+<circle
+cx="720"
+cy="250"
+r="34"
+fill="#17336E"
+stroke="#F5C84A"
+stroke-width="2"/>
+
+<path
+d="M720 228
+L730 234
+L730 248
+C730 258 724 266 720 270
+C716 266 710 258 710 248
+V234
+Z"
+
+fill="#FFD45D"/>
+
+</g>
+
+<!-- LEFT BOTTOM -->
+
+<g>
+
+<circle
+cx="165"
+cy="625"
+r="34"
+fill="#17336E"
+stroke="#5A93FF"
+stroke-width="2"/>
+
+<path
+d="M160 605
+V635"
+
+stroke="white"
+stroke-width="2"/>
+
+<path
+d="M145 622
+H175"
+
+stroke="white"
+stroke-width="2"/>
+
+<path
+d="M160 605
+L150 625"
+
+stroke="white"
+stroke-width="2"/>
+
+<path
+d="M160 605
+L170 625"
+
+stroke="white"
+stroke-width="2"/>
+
+</g>
+
+<!-- RIGHT BOTTOM -->
+
+<g>
+
+<circle
+cx="720"
+cy="625"
+r="34"
+fill="#17336E"
+stroke="#5A93FF"
+stroke-width="2"/>
+
+<rect
+x="709"
+y="614"
+width="22"
+height="22"
+rx="4"
+fill="white"/>
+
+<rect
+x="714"
+y="619"
+width="12"
+height="12"
+rx="2"
+fill="#5A93FF"/>
+
+</g>
+
+<!-- OUTER CONNECTIONS -->
+
+<g
+stroke="#4F86FF"
+stroke-width="2"
+fill="none"
+opacity=".45">
+
+<path d="M205 235 Q305 255 395 380"/>
+
+<path d="M686 250 Q610 280 555 355"/>
+
+<path d="M198 625 Q315 590 405 520"/>
+
+<path d="M686 625 Q610 575 525 585"/>
+
+</g>
+
+<!-- decorative particles -->
+
+<g fill="#FFD45D">
+
+<circle cx="610" cy="170" r="2.5"/>
+<circle cx="320" cy="140" r="2"/>
+<circle cx="650" cy="520" r="2.5"/>
+<circle cx="275" cy="500" r="2.5"/>
+<circle cx="535" cy="770" r="2"/>
+<circle cx="370" cy="760" r="2"/>
+
+</g>
+
+</svg>

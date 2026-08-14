@@ -1,0 +1,44 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+<linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#6FA8FF"></stop>
+<stop offset="100%" stop-color="#2563FF"></stop>
+</linearGradient>
+
+<linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#D8F8FF"></stop>
+<stop offset="100%" stop-color="#8DEAFF"></stop>
+</linearGradient>
+
+<filter id="glow">
+<feGaussianBlur stdDeviation="3"></feGaussianBlur>
+</filter>
+
+</defs>
+
+<circle cx="64" cy="64" r="52" fill="#0F172A" stroke="url(#blue)" stroke-width="2"></circle>
+
+<path d="M52 26
+h24
+v10
+l-7 11
+v26
+c0 6 4 10 8 15
+H51
+c4-5 8-9 8-15
+V47
+l-7-11
+z" fill="url(#glass)" stroke="#B8FFFF" stroke-width="2"></path>
+
+<path d="M55 69
+Q64 60 73 69" fill="none" stroke="#2563FF" stroke-width="4" stroke-linecap="round"></path>
+
+<circle cx="45" cy="40" r="3" fill="#4F87FF"></circle>
+
+<circle cx="83" cy="49" r="4" fill="#4F87FF"></circle>
+
+<circle cx="87" cy="77" r="3" fill="#4F87FF"></circle>
+
+</svg>

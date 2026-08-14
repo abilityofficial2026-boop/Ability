@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Core Palette & Gradients -->
+    <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7FB2FF"/><stop offset="100%" stop-color="#2563FF"/></linearGradient>
+    <linearGradient id="gradGold" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#F5C15D"/><stop offset="100%" stop-color="#ff9900"/></linearGradient>
+    <linearGradient id="gradGlass" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08"/></linearGradient>
+    <radialGradient id="gradHoloCore" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2563FF" stop-opacity="0.5"/><stop offset="100%" stop-color="#2563FF" stop-opacity="0"/></radialGradient>
+
+    <!-- Filters -->
+    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur1"/>
+      <feMerge><feMergeNode in="blur1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bgBlur"><feGaussianBlur stdDeviation="30"/></filter>
+
+    <!-- Reusable Icon Definitions (Glassmorphism style) -->
+    <g id="icon-base"><circle cx="25" cy="25" r="24" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1" opacity="0.7"/><circle cx="25" cy="25" r="25" fill="none" stroke="#7FB2FF" stroke-width="0.5" opacity="0.3"/></g>
+    <g id="icon-accent-base"><circle cx="25" cy="25" r="24" fill="url(#gradGlass)" stroke="#F5C15D" stroke-width="1" opacity="0.8"/><circle cx="25" cy="25" r="25" fill="none" stroke="#F5C15D" stroke-width="0.5" opacity="0.4"/></g>
+
+    <symbol id="ic-ai" viewBox="0 0 50 50"><use href="#icon-base"/><rect x="15" y="15" width="20" height="20" rx="4" fill="#071120" stroke="#2563FF" stroke-width="1"/><rect x="18" y="19" width="14" height="8" rx="1" fill="#2563FF" opacity="0.7"/><circle cx="22" cy="23" r="1.5" fill="#FFFFFF"/><circle cx="28" cy="23" r="1.5" fill="#FFFFFF"/><circle cx="25" cy="29" r="1.5" fill="#FFFFFF" opacity="0.5"/></symbol>
+    <symbol id="ic-robo" viewBox="0 0 50 50"><use href="#icon-base"/><path d="M12 32 L18 26 L28 30 L36 20" fill="none" stroke="#F5C15D" stroke-width="2.5" stroke-linecap="round" filter="url(#bloom)"/><circle cx="36" cy="20" r="4" fill="#F5C15D" filter="url(#bloom)"/><rect x="10" y="28" width="6" height="10" rx="1" fill="#7FB2FF" opacity="0.8"/></symbol>
+    <symbol id="ic-rock" viewBox="0 0 50 50"><use href="#icon-base"/><path d="M25 8 L30 20 L30 35 L25 40 L20 35 L20 20 Z" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1.5"/><path d="M18 35 L15 40 L20 38 M32 35 L35 40 L30 38" fill="none" stroke="#2563FF" stroke-width="1.5"/><circle cx="25" cy="24" r="4" fill="#FFFFFF" filter="url(#bloom)"/></symbol>
+    <symbol id="ic-mic" viewBox="0 0 50 50"><use href="#icon-base"/><path d="M16 12 L34 12 M25 12 L25 36 M14 36 L36 36" fill="none" stroke="#7FB2FF" stroke-width="2" stroke-linecap="round"/><path d="M32 20 C32 23, 18 23, 18 20 L18 28 C18 31, 32 31, 32 28 Z" fill="url(#gradGlass)" stroke="#2563FF" stroke-width="1"/><circle cx="25" cy="24" r="3" fill="#F5C15D" filter="url(#bloom)"/></symbol>
+    <symbol id="ic-dna" viewBox="0 0 50 50"><use href="#icon-base"/><path d="M15 10 C15 10, 25 20, 15 30 C15 40, 25 50, 15 60 M35 10 C35 10, 25 20, 35 30 C35 40, 25 50, 35 60" transform="translate(0 -10)" fill="none" stroke="#7FB2FF" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="15" x2="35" y2="15" stroke="#2563FF" stroke-width="1.5"/><line x1="15" y1="25" x2="35" y2="25" stroke="#2563FF" stroke-width="1.5"/><line x1="15" y1="35" x2="35" y2="35" stroke="#2563FF" stroke-width="1.5"/></symbol>
+    <symbol id="ic-circ" viewBox="0 0 50 50"><use href="#icon-base"/><rect x="10" y="10" width="30" height="30" rx="5" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1.5"/><circle cx="18" cy="18" r="3" fill="#2563FF"/><circle cx="32" cy="32" r="3" fill="#2563FF"/><path d="M18 21 L18 32 L32 32" fill="none" stroke="#2563FF" stroke-width="1.5"/><rect x="24" y="22" width="10" height="10" rx="2" fill="#071120" stroke="#7FB2FF" stroke-width="0.5"/></symbol>
+    <symbol id="ic-sat" viewBox="0 0 50 50"><use href="#icon-base"/><rect x="20" y="20" width="10" height="10" rx="2" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1.5"/><rect x="8" y="15" width="8" height="20" rx="2" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1.5"/><rect x="34" y="15" width="8" height="20" rx="2" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1.5"/><path d="M25 20 L25 5 L22 8 M25 5 L28 8" fill="none" stroke="#F5C15D" stroke-width="2" stroke-linecap="round" filter="url(#bloom)"/></symbol>
+    <symbol id="ic-cloud" viewBox="0 0 50 50"><use href="#icon-base"/><path d="M13 32 C10 32, 7 29, 7 25 C7 20, 12 17, 17 19 C20 14, 26 14, 29 19 C34 16, 39 19, 39 24 C39 28, 36 32, 32 32 Z" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="2" filter="url(#bloom)"/><path d="M19 36 L21 40 M29 36 L27 40" fill="none" stroke="#2563FF" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-cube" viewBox="0 0 50 50"><use href="#icon-base"/><path d="M25 4 L42 14 L42 34 L25 44 L8 34 L8 14 Z" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="2"/><path d="M25 44 L25 24 L8 14 M25 24 L42 14" fill="none" stroke="#2563FF" stroke-width="1.5"/><path d="M15 18 L25 12 L35 18 L25 24 Z" fill="#2563FF" opacity="0.6" filter="url(#bloom)"/></symbol>
+    <symbol id="ic-spark" viewBox="0 0 50 50"><use href="#icon-accent-base"/><circle cx="25" cy="25" r="16" fill="url(#gradGlass)" stroke="#F5C15D" stroke-width="1.5" filter="url(#bloom)"/><path d="M25 5 L28 22 L45 25 L28 28 L25 45 L22 28 L5 25 L22 22 Z" fill="#F5C15D" filter="url(#bloom)"/></symbol>
+
+    <!-- Central Particle Bulb -->
+    <symbol id="particle-bulb" viewBox="0 0 200 200">
+      <path d="M60 70 C60 40, 85 20, 120 20 C155 20, 180 40, 180 70 C180 95, 160 110, 150 125 L150 140 L90 140 L90 125 C80 110, 60 95, 60 70 Z" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="2.5" filter="url(#bloom)"/>
+      <rect x="95" y="140" width="30" height="18" rx="3" fill="#071120" stroke="#7FB2FF" stroke-width="1.5"/>
+      <rect x="90" y="158" width="40" height="6" rx="2" fill="#071120" stroke="#7FB2FF" stroke-width="1.5"/>
+      <g id="internal-particles">
+        <circle cx="120" cy="80" r="4" fill="#FFFFFF" opacity="0.9"><animate attributeName="r" values="4;7;4" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.2s" repeatCount="indefinite"/></circle>
+        <circle cx="105" cy="65" r="2.5" fill="#7FB2FF" opacity="0.8"><animate attributeName="cy" values="65;58;65" dur="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="135" cy="65" r="2.5" fill="#7FB2FF" opacity="0.8"><animate attributeName="cy" values="65;72;65" dur="2s" repeatCount="indefinite"/></circle>
+        <circle cx="120" cy="45" r="2" fill="#F5C15D" opacity="0.7"><animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="112" cy="100" r="2.5" fill="#7FB2FF" opacity="0.8"/>
+        <circle cx="128" cy="100" r="2.5" fill="#7FB2FF" opacity="0.8"/>
+      </g>
+      <ellipse cx="120" cy="145" rx="40" ry="12" fill="url(#gradHoloCore)" filter="url(#bloom)"/>
+    </symbol>
+
+    <!-- Holographic Platform -->
+    <symbol id="holo-platform" viewBox="0 0 600 200">
+      <ellipse cx="300" cy="100" rx="280" ry="80" fill="url(#gradHoloCore)" filter="url(#bloom)"/>
+      <ellipse cx="300" cy="100" rx="250" ry="65" fill="none" stroke="#7FB2FF" stroke-width="3" stroke-dasharray="15 8" opacity="0.6"/>
+      <ellipse cx="300" cy="100" rx="220" ry="55" fill="none" stroke="#2563FF" stroke-width="1.5" opacity="0.4"/>
+      <g stroke-width="2">
+        <ellipse cx="300" cy="100" rx="180" ry="48" fill="none" stroke="#F5C15D" transform="rotate(0 300 100)">
+          <animateTransform attributeName="transform" type="rotate" from="0 300 100" to="360 300 100" dur="15s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="300" cy="100" rx="150" ry="40" fill="none" stroke="#7FB2FF" stroke-dasharray="10 10" transform="rotate(30 300 100)">
+          <animateTransform attributeName="transform" type="rotate" from="30 300 100" to="-330 300 100" dur="10s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+    </symbol>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#071120"/>
+  <circle cx="400" cy="400" r="380" fill="url(#gradHoloCore)" opacity="0.15" filter="url(#bgBlur)"/>
+  <circle cx="400" cy="400" r="250" fill="#F5C15D" opacity="0.05" filter="url(#bgBlur)"/>
+
+  <!-- Subtle Background Grid & Particles -->
+  <g opacity="0.07" stroke="#7FB2FF" stroke-width="0.5">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800 M0 500 H800 M0 600 H800 M0 700 H800"/>
+    <path d="M100 0 V800 M200 0 V800 M300 0 V800 M400 0 V800 M500 0 V800 M600 0 V800 M700 0 V800"/>
+  </g>
+
+  <g opacity="0.6">
+    <circle cx="150" cy="200" r="1.5" fill="#FFFFFF"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="180" r="1" fill="#7FB2FF"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="500" r="2" fill="#F5C15D"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="600" r="1" fill="#FFFFFF"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Centered Holographic Platform (EXACT centre at Y=540) -->
+  <use href="#holo-platform" x="100" y="440" width="600" height="200"/>
+
+  <!-- Glowing Energy Connection Lines Radiating from Centre (400, 400) to Circular Layout Radius ~210 -->
+  <g fill="none" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
+    <path d="M400 400 L250 220" stroke="url(#gradBlue)"/>
+    <path d="M400 400 L370 170" stroke="url(#gradGold)"/>
+    <path d="M400 400 L550 220" stroke="url(#gradBlue)"/>
+    <path d="M400 400 L430 170" stroke="url(#gradGold)"/>
+    <path d="M400 400 L200 320" stroke="url(#gradGold)"/>
+    <path d="M400 400 L600 320" stroke="url(#gradBlue)"/>
+    <path d="M400 400 L200 480" stroke="url(#gradBlue)"/>
+    <path d="M400 400 L600 480" stroke="url(#gradGold)"/>
+    <path d="M400 400 L270 580" stroke="url(#gradGold)"/>
+    <path d="M400 400 L530 580" stroke="url(#gradBlue)"/>
+  </g>
+
+  <!-- Centered Glowing Light Bulb Directly Above Platform -->
+  <g transform="translate(300, 275)">
+    <animateTransform attributeName="transform" type="translate" values="300,275; 300,267; 300,275" dur="5s" repeatCount="indefinite" additive="sum"/>
+    <use href="#particle-bulb" width="200" height="200"/>
+  </g>
+
+  <!-- Perfectly Balanced Circular Layout Around Centre (Radius ~210 px) -->
+  <!-- Top Region -->
+  <g transform="translate(345, 145)">
+    <animateTransform attributeName="transform" type="translate" values="345,145; 345,138; 345,145" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-spark" width="50" height="50"/>
+  </g>
+  <g transform="translate(225, 195)">
+    <animateTransform attributeName="transform" type="translate" values="225,195; 220,188; 225,195" dur="6s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-cloud" width="50" height="50"/>
+  </g>
+  <g transform="translate(525, 195)">
+    <animateTransform attributeName="transform" type="translate" values="525,195; 530,188; 525,195" dur="6.2s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-cube" width="50" height="50"/>
+  </g>
+
+  <!-- Mid Region (Left / Right) -->
+  <g transform="translate(175, 295)">
+    <animateTransform attributeName="transform" type="translate" values="175,295; 168,290; 175,295" dur="5.5s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-ai" width="50" height="50"/>
+  </g>
+  <g transform="translate(575, 295)">
+    <animateTransform attributeName="transform" type="translate" values="575,295; 582,290; 575,295" dur="7s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-sat" width="50" height="50"/>
+  </g>
+  <g transform="translate(175, 455)">
+    <animateTransform attributeName="transform" type="translate" values="175,455; 168,460; 175,455" dur="7.5s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-robo" width="50" height="50"/>
+  </g>
+  <g transform="translate(575, 455)">
+    <animateTransform attributeName="transform" type="translate" values="575,455; 582,460; 575,455" dur="6.8s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-circ" width="50" height="50"/>
+  </g>
+
+  <!-- Lower Region -->
+  <g transform="translate(245, 555)">
+    <animateTransform attributeName="transform" type="translate" values="245,555; 240,562; 245,555" dur="5.8s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-rock" width="50" height="50"/>
+  </g>
+  <g transform="translate(505, 555)">
+    <animateTransform attributeName="transform" type="translate" values="505,555; 510,562; 505,555" dur="6.3s" repeatCount="indefinite" additive="sum"/>
+    <use href="#ic-dna" width="50" height="50"/>
+  </g>
+
+</svg>

@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sunriseGlow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#F5C15D" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#2563FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#071126" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF3CD"/>
+      <stop offset="60%" stop-color="#F5C15D"/>
+      <stop offset="100%" stop-color="#C68A12" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glassWall" x1="150" y1="320" x2="550" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#7FB2FF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#2563FF" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="glassEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#7FB2FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2563FF" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="greenTerrain" x1="0" y1="480" x2="0" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#071126" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2CC"/>
+      <stop offset="100%" stop-color="#F5C15D"/>
+    </linearGradient>
+
+    <filter id="ultraBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <g id="abstractTree">
+      <line x1="0" y1="0" x2="0" y2="-45" stroke="#7FB2FF" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="0" cy="-55" r="18" fill="#4CAF50" fill-opacity="0.35" stroke="url(#glassEdge)" stroke-width="1.5" filter="url(#softGlow)"/>
+    </g>
+
+    <g id="learningNode">
+      <circle cx="0" cy="0" r="4" fill="#F5C15D" filter="url(#softGlow)"/>
+      <circle cx="0" cy="0" r="9" fill="none" stroke="#F5C15D" stroke-width="1" opacity="0.6">
+        <animate attributeName="r" values="6;14;6" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <clipPath id="buildingClip">
+      <path d="M 220 460 L 220 340 L 350 280 L 480 340 L 480 460 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- 1. BACKGROUND LAYER -->
+  <g id="Background-Layer">
+    <rect width="700" height="700" fill="#071126"/>
+    <circle cx="350" cy="380" r="320" fill="url(#sunriseGlow)" filter="url(#ultraBlur)"/>
+    
+    <!-- Rising Sun -->
+    <circle cx="350" cy="360" r="65" fill="url(#sunOrb)" filter="url(#softGlow)">
+      <animate attributeName="cy" values="375;355;375" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Subtle Mountain Silhouettes -->
+    <path d="M 0 520 L 140 390 L 280 480 L 420 370 L 580 490 L 700 410 L 700 700 L 0 700 Z" fill="#0E1A36" opacity="0.6"/>
+  </g>
+
+  <!-- 2. DIGITAL PATHWAYS & CONNECTIVITY LAYER -->
+  <g id="Network-Layer" stroke-width="1.5" fill="none">
+    <path d="M 120 540 C 200 480, 280 440, 350 430 C 420 440, 500 480, 580 540" stroke="url(#glassEdge)" stroke-dasharray="6 8" opacity="0.4">
+      <animate attributeName="stroke-dashoffset" values="100;0" dur="15s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 220 430 L 350 280 L 480 430" stroke="#7FB2FF" opacity="0.3"/>
+    <path d="M 350 280 L 350 120" stroke="url(#goldAccent)" stroke-dasharray="4 6" opacity="0.7">
+      <animate attributeName="stroke-dashoffset" values="50;0" dur="8s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Floating Learning Nodes -->
+    <use href="#learningNode" x="220" y="430"/>
+    <use href="#learningNode" x="480" y="430"/>
+    <use href="#learningNode" x="350" y="280"/>
+    <use href="#learningNode" x="350" y="160"/>
+    <use href="#learningNode" x="270" y="210"/>
+    <use href="#learningNode" x="430" y="210"/>
+  </g>
+
+  <!-- 3. RURAL SCHOOL CAMPUS LAYER -->
+  <g id="School-Layer">
+    <!-- Floating Wrapper for Entire Campus -->
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -8; 0 0" dur="6s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Campus Ground Reflection/Glow -->
+    <ellipse cx="350" cy="545" rx="200" ry="25" fill="#2563FF" filter="url(#ultraBlur)" opacity="0.5"/>
+
+    <!-- Green Landscape / Terraced Fields Base -->
+    <path d="M 50 535 C 200 510, 500 510, 650 535 L 700 700 L 0 700 Z" fill="url(#greenTerrain)"/>
+
+    <!-- Modern School Building Structure -->
+    <g id="Building">
+      <!-- Main Glass Facade -->
+      <path d="M 220 470 L 220 340 L 350 280 L 480 340 L 480 470 Z" fill="url(#glassWall)" stroke="url(#glassEdge)" stroke-width="2.5" filter="url(#softGlow)"/>
+      
+      <!-- Architectural Glass Panels / Large Windows Grid -->
+      <g stroke="#7FB2FF" stroke-width="1.5" opacity="0.6">
+        <line x1="350" y1="280" x2="350" y2="470"/>
+        <line x1="285" y1="310" x2="285" y2="470"/>
+        <line x1="415" y1="310" x2="415" y2="470"/>
+        <line x1="220" y1="380" x2="480" y2="380"/>
+        <line x1="220" y1="430" x2="480" y2="430"/>
+      </g>
+
+      <!-- Entrance Portal / Core -->
+      <path d="M 320 470 L 320 410 L 380 410 L 380 470 Z" fill="#071126" stroke="url(#glassEdge)" stroke-width="2"/>
+    </g>
+
+    <!-- Trees & Nature Surrounding Campus -->
+    <g id="Trees">
+      <use href="#abstractTree" x="150" y="530"/>
+      <use href="#abstractTree" x="190" y="545" transform="scale(0.8)"/>
+      <use href="#abstractTree" x="550" y="535"/>
+      <use href="#abstractTree" x="510" y="550" transform="scale(0.85)"/>
+      <animateTransform attributeName="transform" type="rotate" values="-1 350 500; 1 350 500; -1 350 500" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- Students Walking Toward School (Minimal Geometric Outlines) -->
+    <g id="Students" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.8">
+      <!-- Student 1 -->
+      <g transform="translate(280, 500)">
+        <circle cx="0" cy="-15" r="4" fill="#FFFFFF"/>
+        <path d="M 0 -11 L 0 5 M 0 -5 L -5 2 M 0 -5 L 5 2 M 0 5 L -3 15 M 0 5 L 3 15"/>
+      </g>
+      <!-- Student 2 -->
+      <g transform="translate(310, 510)">
+        <circle cx="0" cy="-15" r="4" fill="#FFFFFF"/>
+        <path d="M 0 -11 L 0 5 M 0 -5 L -5 2 M 0 -5 L 5 2 M 0 5 L -3 15 M 0 5 L 3 15"/>
+      </g>
+      <!-- Student 3 -->
+      <g transform="translate(390, 505)">
+        <circle cx="0" cy="-15" r="4" fill="#FFFFFF"/>
+        <path d="M 0 -11 L 0 5 M 0 -5 L -5 2 M 0 -5 L 5 2 M 0 5 L -3 15 M 0 5 L 3 15"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 4. FLOATING ACADEMIC & FUTURISTIC SYMBOLS -->
+  <g id="Academic-Symbols">
+    <!-- Floating Graduation Cap Above Roof -->
+    <g transform="translate(350, 240)">
+      <animateTransform attributeName="transform" type="translate" values="350 240; 350 232; 350 240" dur="4s" repeatCount="indefinite" additive="sum"/>
+      <polygon points="0,-12 25,0 0,12 -25,0" fill="#071126" stroke="url(#goldAccent)" stroke-width="2" filter="url(#softGlow)"/>
+      <path d="M 12 6 L 12 18 C 12 22, -12 22, -12 18 L -12 6" fill="none" stroke="url(#goldAccent)" stroke-width="1.5"/>
+    </g>
+
+    <!-- Floating Open Book / Digital Learning Icon -->
+    <g transform="translate(140, 280)">
+      <animateTransform attributeName="transform" type="translate" values="140 280; 140 273; 140 280" dur="5s" repeatCount="indefinite" additive="sum"/>
+      <path d="M -20 -10 C -10 -15, 0 -15, 10 -10 L 10 10 C 0 5, -10 5, -20 10 Z" fill="none" stroke="#7FB2FF" stroke-width="1.5" opacity="0.8"/>
+      <path d="M 10 -10 C 20 -15, 30 -15, 40 -10 L 40 10 C 30 5, 20 5, 10 10 Z" fill="none" stroke="#7FB2FF" stroke-width="1.5" opacity="0.8"/>
+    </g>
+
+    <!-- Birds Slowly Flying (Hope & Future) -->
+    <g stroke="#7FB2FF" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M 480 180 Q 490 170, 500 180 Q 510 170, 520 180">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -20 -10; 0 0" dur="8s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 520 160 Q 527 152, 535 160 Q 543 152, 550 160">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -15 -8; 0 0" dur="7s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- 5. LIGHTING & AMBIENT OVERLAY LAYER -->
+  <g id="Lighting-Layer" pointer-events="none">
+    <circle cx="350" cy="280" r="150" fill="url(#sunriseGlow)" filter="url(#ultraBlur)" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

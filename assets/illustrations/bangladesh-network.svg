@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <style>
+      @keyframes pulse { 0%, 100% { opacity: 0.6; r: 4; } 50% { opacity: 1; r: 6; } }
+      @keyframes dashOffset { 0% { stroke-dashoffset: 1000; } 100% { stroke-dashoffset: 0; } }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    
+    <linearGradient id="gradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563FF"/>
+      <stop offset="100%" stop-color="#7FB2FF"/>
+    </linearGradient>
+    <linearGradient id="gradGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5C15D"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <radialGradient id="gradGlass" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="gradRadial" cx="50%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#111E3C"/>
+      <stop offset="100%" stop-color="#071120"/>
+    </radialGradient>
+    
+    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <path id="bdOutline" d="M298 137 L315 149 L323 160 L331 161 L341 156 L355 159 L364 171 L375 165 L391 177 L393 188 L411 186 L420 198 L406 215 L414 232 L420 256 L409 272 L398 285 L407 299 L411 320 L398 340 L399 354 L420 363 L426 388 L421 394 L434 403 L463 403 L479 422 L503 424 L519 442 L532 441 L532 430 L543 420 L556 431 L556 443 L537 458 L528 476 L510 488 L500 510 L466 512 L461 532 L467 556 L479 560 L491 581 L486 600 L473 595 L454 607 L429 601 L420 582 L398 563 L395 544 L373 540 L345 555 L317 555 L302 542 L311 532 L298 521 L296 495 L282 486 L272 471 L272 455 L288 443 L294 431 L288 419 L271 420 L260 409 L267 388 L278 368 L271 354 L277 338 L272 320 L286 297 L288 275 L273 254 L271 233 L283 208 L278 194 L289 186 L286 166 L294 160 L293 145 Z" fill="none"/>
+    
+    <g id="icon-trophy">
+      <path d="M15 3L18 6M25 3L22 6M10 6h15a2 2 0 0 1 2 2v3a5 5 0 0 1-5 5h-5a5 5 0 0 1-5-5V8a2 2 0 0 1 2-2Z" stroke="url(#gradGold)" stroke-width="1.5" fill="none"/>
+      <path d="M18 16v6M12 22h12" stroke="url(#gradGold)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g id="icon-lab">
+      <path d="M10 18h10M15 8v12M8 18l7-14 7 14M17.5 11l-5 10" stroke="url(#gradPrimary)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="icon-school">
+      <path d="M4 19.5v-9L12 4l8 6.5v9M12 19.5v-7" stroke="url(#gradPrimary)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M9 19.5h6" stroke="url(#gradPrimary)" stroke-width="1.5"/>
+    </g>
+    <g id="icon-student">
+      <path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm7 12c0 3.87-3.13 7-7 7s-7-3.13-7-7" stroke="url(#gradPrimary)" stroke-width="1.5" fill="none"/>
+      <path d="M12 12v4M10 14h4" stroke="url(#gradPrimary)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g id="icon-teacher">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="url(#gradPrimary)" stroke-width="1.5" fill="none"/>
+      <path d="M16 5l4 4M20 5l-4 4" stroke="url(#gradGold)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g id="icon-innovation">
+      <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" stroke="url(#gradGold)" stroke-width="1.5" fill="none" filter="url(#bloom)"/>
+      <circle cx="12" cy="12" r="3" fill="#F5C15D" filter="url(#bloom)"/>
+    </g>
+    <g id="icon-ai">
+      <path d="M3 8l9-5 9 5v7l-9 5-9-5V8z" stroke="url(#gradPrimary)" stroke-width="1.5" fill="none"/>
+      <path d="M12 3v7M12 17v4M7 8l5 3 5-3M7 15l5-3 5 3" stroke="url(#gradPrimary)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g id="icon-skills">
+      <path d="M23 6h-8M23 12h-6M23 18h-4" stroke="url(#gradPrimary)" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M1 6l6 3 6-3-6-3-6 3zm0 6l6 3 6-3-6-3-6 3zm0 6l6 3 6-3-6-3-6 3z" stroke="url(#gradPrimary)" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <clipPath id="mapClip">
+      <use href="#bdOutline"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#gradRadial)"/>
+  
+  <g opacity="0.05">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7FB2FF" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="800" height="800" fill="url(#grid)"/>
+  </g>
+
+  <g filter="url(#bloom)">
+    <rect x="200" y="300" width="50" height="50" fill="#2563FF" opacity="0.03">
+      <animateTransform attributeName="transform" type="rotate" from="0 225 325" to="360 225 325" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="600" cy="600" r="80" fill="#7FB2FF" opacity="0.03"/>
+    <circle cx="150" cy="150" r="100" fill="#F5C15D" opacity="0.02"/>
+  </g>
+
+  <g clip-path="url(#mapClip)">
+    <use href="#bdOutline" stroke="#7FB2FF" stroke-width="1" opacity="0.1"/>
+    <rect width="800" height="800" fill="#2563FF" opacity="0.08">
+      <animate attributeName="opacity" values="0.08;0.15;0.08" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <ellipse cx="400" cy="400" rx="300" ry="200" fill="#7FB2FF" opacity="0.1" filter="url(#softGlow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="30s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <g id="particles">
+    <circle cx="100" cy="100" r="1.5" fill="#FFFFFF" opacity="0.5"><animateMotion path="M0 0 C 50 20, 100 -20, 150 0" dur="15s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="200" r="1" fill="#7FB2FF" opacity="0.5"><animateMotion path="M0 0 C -30 50, 30 100, 0 150" dur="12s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="700" r="1.5" fill="#F5C15D" opacity="0.5"><animateMotion path="M0 0 C 80 -30, -80 30, 0 60" dur="18s" repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="650" r="1" fill="#FFFFFF" opacity="0.5"><animateMotion path="M0 0 C 20 -50, -20 50, 0 0" dur="20s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <g id="network-lines" fill="none" stroke-width="1.5" opacity="0.4">
+    <path stroke="url(#gradPrimary)" d="M400 260 L477 289 L542 230 M477 289 L547 381 L550 436 M477 289 L460 416 M400 260 L400 299 M400 260 L305 250 M400 260 L275 335 M400 260 L310 445 M310 445 L399 543 M310 445 L277 460 M399 543 L461 520 L486 579 M399 543 L423 592 M310 445 L380 545">
+      <animate attributeName="stroke-dasharray" values="0 1000; 1000 0" dur="6s" repeatCount="indefinite" begin="1s"/>
+    </path>
+  </g>
+
+  <g id="hubs" filter="url(#bloom)">
+    <g transform="translate(400, 260)"><circle r="10" fill="url(#gradPrimary)" opacity="0.3"/><circle r="5" fill="#FFFFFF"><animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/></circle></g>
+    <g transform="translate(550, 436)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+    <g transform="translate(542, 230)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+    <g transform="translate(460, 416)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+    <g transform="translate(400, 299)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+    <g transform="translate(305, 250)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+    <g transform="translate(275, 335)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+    <g transform="translate(310, 445)"><circle r="6" fill="url(#gradPrimary)" opacity="0.3"/><circle r="3" fill="#7FB2FF"/></g>
+  </g>
+
+  <g id="ability-hub" transform="translate(400, 150)" filter="url(#bloom)">
+    <circle r="35" fill="url(#gradGlass)" stroke="url(#gradGold)" stroke-width="1.5"/>
+    <circle r="25" fill="#071120" stroke="url(#gradPrimary)" stroke-width="1"/>
+    <path d="M-8 -5 L0 -15 L8 -5 M-8 5 L0 15 L8 5" stroke="#F5C15D" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M-12 0 L12 0" stroke="#7FB2FF" stroke-width="2"/>
+    <animateTransform attributeName="transform" type="translate" values="400,150; 400,145; 400,150" dur="4s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <g id="ability-connections" fill="none" stroke="url(#gradGold)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.7">
+    <path d="M400 185 L400 260">
+      <animate attributeName="stroke-dashoffset" values="50;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M380 170 L305 250"/>
+    <path d="M420 170 L542 230"/>
+    <path d="M375 180 L310 445"/>
+  </g>
+
+  <g id="floating-icons">
+    <g transform="translate(150, 200)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-trophy" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="150,200; 150,192; 150,200" dur="5s" repeatCount="indefinite"/>
+    </g>
+    <path d="M192 220 C230 240, 270 250, 305 250" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(620, 180)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-innovation" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="620,180; 628,186; 620,180" dur="6s" repeatCount="indefinite"/>
+    </g>
+    <path d="M620 200 C580 210, 560 220, 542 230" fill="none" stroke="url(#gradGold)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(120, 400)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-school" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="120,400; 112,408; 120,400" dur="5.5s" repeatCount="indefinite"/>
+    </g>
+    <path d="M162 410 C210 420, 250 430, 275 335" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(650, 380)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-ai" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="650,380; 658,372; 650,380" dur="4.8s" repeatCount="indefinite"/>
+    </g>
+    <path d="M650 400 C600 410, 570 420, 547 381" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(180, 600)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-lab" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="180,600; 188,608; 180,600" dur="6.2s" repeatCount="indefinite"/>
+    </g>
+    <path d="M222 600 C250 580, 280 500, 310 445" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(600, 580)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-skills" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="600,580; 592,572; 600,580" dur="5.2s" repeatCount="indefinite"/>
+    </g>
+    <path d="M600 580 C570 550, 560 500, 550 436" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(320, 670)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-student" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="320,670; 320,662; 320,670" dur="5.8s" repeatCount="indefinite"/>
+    </g>
+    <path d="M340 670 C360 630, 380 580, 399 543" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+
+    <g transform="translate(480, 660)">
+      <circle cx="20" cy="20" r="22" fill="url(#gradGlass)" stroke="#7FB2FF" stroke-width="1"/>
+      <use href="#icon-teacher" x="8" y="8"/>
+      <animateTransform attributeName="transform" type="translate" values="480,660; 488,668; 480,660" dur="6.5s" repeatCount="indefinite"/>
+    </g>
+    <path d="M480 660 C470 630, 465 590, 461 520" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3"/>
+  </g>
+</svg>

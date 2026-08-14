@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <defs>
+    <!-- Background / Base Gradients -->
+    <radialGradient id="bgGlow1" cx="350" cy="320" r="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563FF" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#7FB2FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#071126" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="220" cy="220" r="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FB2FF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#071126" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow3" cx="500" cy="420" r="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5C15D" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#071126" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- UI & Glass Gradients -->
+    <linearGradient id="glassBase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="glassBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7FB2FF" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2563FF" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="laptopBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c3c60" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f1a36" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5C15D"/>
+      <stop offset="100%" stop-color="#ff9900"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7FB2FF"/>
+      <stop offset="100%" stop-color="#2563FF"/>
+    </linearGradient>
+
+    <!-- Filters & Glows -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+    <filter id="deepBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+
+    <!-- Reusable UI Components -->
+    <g id="dbCylinder">
+      <ellipse cx="0" cy="0" rx="22" ry="8" fill="url(#blueGrad)" opacity="0.8"/>
+      <path d="M -22 0 L -22 18 C -22 22, 22 22, 22 18 L 22 0" fill="url(#glassBase)"/>
+      <path d="M -22 12 L -22 30 C -22 34, 22 34, 22 30 L 22 12" fill="url(#glassBase)"/>
+      <ellipse cx="0" cy="18" rx="22" ry="8" fill="none" stroke="#7FB2FF" stroke-width="1.5" opacity="0.6"/>
+      <ellipse cx="0" cy="30" rx="22" ry="8" fill="none" stroke="#7FB2FF" stroke-width="1.5" opacity="0.8"/>
+    </g>
+
+    <g id="shieldNode">
+      <path d="M 0 -16 L 13 -10 L 13 4 C 13 12, 5 18, 0 21 C -5 18, -13 12, -13 4 L -13 -10 Z" fill="url(#glassBase)" stroke="url(#blueGrad)" stroke-width="1.5"/>
+      <path d="M -4 1 L -1 5 L 5 -3" fill="none" stroke="#F5C15D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g id="cloudNode">
+      <path d="M -12 6 C -17 6, -20 2, -18 -2 C -17 -7, -11 -8, -8 -5 C -6 -10, 2 -10, 5 -5 C 9 -6, 14 -2, 12 3 C 11 7, 7 8, 3 8 L -12 8 Z" fill="url(#glassBase)" stroke="url(#blueGrad)" stroke-width="1.5"/>
+      <path d="M -3 2 L 0 -2 L 3 2 M 0 -2 L 0 6" fill="none" stroke="#7FB2FF" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- Ambient Background Glows (Blurred Circles Behind) -->
+  <g>
+    <circle cx="350" cy="300" r="180" fill="#2563FF" opacity="0.2" filter="url(#deepBlur)"/>
+    <circle cx="200" cy="240" r="130" fill="#7FB2FF" opacity="0.25" filter="url(#softBlur)"/>
+    <circle cx="500" cy="400" r="150" fill="#F5C15D" opacity="0.15" filter="url(#softBlur)"/>
+  </g>
+
+  <!-- Background Gradients & Grid Lines -->
+  <rect width="700" height="700" fill="url(#bgGlow1)" pointer-events="none"/>
+  <rect width="700" height="700" fill="url(#bgGlow2)" pointer-events="none"/>
+  <rect width="700" height="700" fill="url(#bgGlow3)" pointer-events="none"/>
+
+  <!-- Subtle Geometric Background Grid Matrix -->
+  <g opacity="0.08" stroke="#7FB2FF" stroke-width="0.5">
+    <path d="M 0 100 L 700 100 M 0 200 L 700 200 M 0 300 L 700 300 M 0 400 L 700 400 M 0 500 L 700 500 M 0 600 L 700 600"/>
+    <path d="M 100 0 L 100 700 M 200 0 L 200 700 M 300 0 L 300 700 M 400 0 L 400 700 M 500 0 L 500 700 M 600 0 L 600 700"/>
+  </g>
+
+  <!-- Orbital Rings & Circuit Paths (Animated) -->
+  <g>
+    <!-- Outer Orbital Ring 1 -->
+    <ellipse cx="350" cy="310" rx="280" ry="110" fill="none" stroke="url(#blueGrad)" stroke-width="1.5" stroke-dasharray="6 12" opacity="0.4" transform="rotate(-15 350 310)">
+      <animateTransform attributeName="transform" type="rotate" from="-15 350 310" to="345 350 310" dur="25s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Outer Orbital Ring 2 (Golden Accent) -->
+    <ellipse cx="350" cy="310" rx="320" ry="85" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="10 20" opacity="0.3" transform="rotate(25 350 310)">
+      <animateTransform attributeName="transform" type="rotate" from="25 350 310" to="-335 350 310" dur="30s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Inner Circuit Connectors -->
+    <path d="M 120 200 Q 220 150 280 230" fill="none" stroke="url(#blueGrad)" stroke-width="1.5" opacity="0.6" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" from="40" to="0" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 580 220 Q 480 140 420 220" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 150 480 Q 250 530 310 460" fill="none" stroke="url(#blueGrad)" stroke-width="1.5" opacity="0.5"/>
+    <path d="M 550 470 Q 450 540 390 460" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Floating Satellite Nodes & Widgets (Around Laptop) -->
+  <g>
+    <!-- Top Left: Cloud Computing Icon -->
+    <g transform="translate(140, 160)">
+      <use href="#cloudNode" filter="url(#glow)"/>
+      <animateTransform attributeName="transform" type="translate" values="140,160; 140,152; 140,160" dur="6s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Top Right: AI Neural Network Node -->
+    <g transform="translate(560, 150)">
+      <circle cx="0" cy="0" r="18" fill="url(#glassBase)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="6" fill="#F5C15D"/>
+      <path d="M -14 -14 L -6 -6 M 14 -14 L 6 -6 M -14 14 L -6 6 M 14 14 L 6 6" stroke="#F5C15D" stroke-width="1.5" opacity="0.8"/>
+      <animateTransform attributeName="transform" type="translate" values="560,150; 565,158; 560,150" dur="5s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Mid Left: Database Cylinders -->
+    <g transform="translate(100, 310)">
+      <use href="#dbCylinder"/>
+      <animateTransform attributeName="transform" type="translate" values="100,310; 100,318; 100,310" dur="7s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Mid Right: Cybersecurity Shield -->
+    <g transform="translate(600, 320)">
+      <use href="#shieldNode" filter="url(#glow)"/>
+      <animateTransform attributeName="transform" type="translate" values="600,320; 600,312; 600,320" dur="5.5s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Lower Left: Floating Code Brackets { } -->
+    <g transform="translate(150, 480)" filter="url(#glow)">
+      <rect x="-22" y="-18" width="44" height="36" rx="8" fill="url(#glassBase)" stroke="url(#blueGrad)" stroke-width="1.5"/>
+      <text x="0" y="6" fill="#7FB2FF" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+      <animateTransform attributeName="transform" type="translate" values="150,480; 155,472; 150,480" dur="6.5s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Lower Right: API / Learning Node -->
+    <g transform="translate(540, 470)" filter="url(#glow)">
+      <rect x="-22" y="-18" width="44" height="36" rx="8" fill="url(#glassBase)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+      <circle cx="-7" cy="0" r="3" fill="#F5C15D"/>
+      <circle cx="7" cy="0" r="3" fill="#F5C15D"/>
+      <path d="M -4 0 L 4 0" stroke="#F5C15D" stroke-width="2"/>
+      <animateTransform attributeName="transform" type="translate" values="540,470; 535,478; 540,470" dur="7.5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Glowing Connection Beams -->
+  <g opacity="0.5">
+    <line x1="160" y1="170" x2="240" y2="230" stroke="url(#blueGrad)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="540" y1="160" x2="460" y2="220" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="125" y1="330" x2="220" y2="330" stroke="url(#blueGrad)" stroke-width="1.5"/>
+    <line x1="575" y1="330" x2="480" y2="330" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <line x1="170" y1="470" x2="240" y2="400" stroke="url(#blueGrad)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="520" y1="460" x2="460" y2="400" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- CENTRAL PIECE: Futuristic Floating Modern Laptop & Workspace -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="4s" repeatCount="indefinite" additive="sum"/>
+    
+    <!-- Laptop Shadow / Ambient Floor Glow -->
+    <ellipse cx="350" cy="455" rx="160" ry="25" fill="#2563FF" opacity="0.4" filter="url(#softBlur)">
+      <animate attributeName="opacity" values="0.4; 0.2; 0.4" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="160; 140; 160" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Laptop Screen Assembly (Glassmorphism Frame) -->
+    <g transform="translate(210, 160)">
+      <!-- Outer Lid / Bezel -->
+      <rect x="0" y="0" width="280" height="190" rx="16" fill="url(#laptopBody)" stroke="url(#glassBorder)" stroke-width="2" filter="url(#glow)"/>
+      <rect x="6" y="6" width="268" height="178" rx="10" fill="#071126"/>
+
+      <!-- CAMERA PINHOLE -->
+      <circle cx="140" cy="14" r="2" fill="#2563FF"/>
+
+      <!-- SCREEN CONTENT AREA -->
+      <g clip-path="url(#screenClip)">
+        <clipPath id="screenClip">
+          <rect x="8" y="24" width="264" height="156" rx="6"/>
+        </clipPath>
+
+        <rect x="8" y="24" width="264" height="156" fill="#0b162c"/>
+
+        <!-- Top Navigation Bar inside Screen -->
+        <rect x="8" y="24" width="264" height="20" fill="#111f3d"/>
+        <circle cx="20" cy="34" r="3" fill="#ff5f56"/>
+        <circle cx="30" cy="34" r="3" fill="#ffbd2e"/>
+        <circle cx="40" cy="34" r="3" fill="#27c93f"/>
+        <text x="140" y="38" fill="#7FB2FF" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle" opacity="0.8">ABILITY // AI Workspace v2.6</text>
+
+        <!-- Split Screen UI: Left Side Code Editor, Right Side Analytics Dashboard & AI Interface -->
+        <!-- Code Editor Section -->
+        <g transform="translate(16, 52)">
+          <rect x="0" y="0" width="115" height="120" rx="4" fill="#071126" stroke="#2563FF" stroke-opacity="0.3" stroke-width="1"/>
+          <!-- Line Numbers -->
+          <text x="8" y="16" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">1</text>
+          <text x="8" y="28" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">2</text>
+          <text x="8" y="40" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">3</text>
+          <text x="8" y="52" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">4</text>
+          <text x="8" y="64" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">5</text>
+          <text x="8" y="76" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">6</text>
+          <text x="8" y="88" fill="#7FB2FF" font-family="monospace" font-size="8" opacity="0.4">7</text>
+          
+          <!-- Code Lines (Blinking Animation) -->
+          <path d="M 22 14 L 65 14" stroke="#F5C15D" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 22 26 L 85 26" stroke="#7FB2FF" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 32 38 L 70 38" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+          <path d="M 32 50 L 55 50" stroke="#2563FF" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 22 62 L 75 62" stroke="#F5C15D" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 22 74 L 50 74" stroke="#7FB2FF" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 32 86 L 80 86" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+            <animate attributeName="opacity" values="0.6; 0.2; 0.6" dur="2s" repeatCount="indefinite"/>
+          </path>
+          
+          <!-- Cursor blinking -->
+          <rect x="83" y="78" width="5" height="10" fill="#2563FF">
+            <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+
+        <!-- Right Side: Analytics & AI Data Visualization -->
+        <g transform="translate(137, 52)">
+          <rect x="0" y="0" width="115" height="120" rx="4" fill="#071126" stroke="#2563FF" stroke-opacity="0.3" stroke-width="1"/>
+          
+          <!-- Mini Dashboard Header -->
+          <text x="10" y="16" fill="#FFFFFF" font-family="sans-serif" font-size="8" font-weight="bold">AI Neural Flux</text>
+          
+          <!-- Updating Line Chart -->
+          <path d="M 10 50 Q 35 25 60 40 T 105 20" fill="none" stroke="url(#goldGrad)" stroke-width="2">
+            <animate attributeName="d" values="M 10 50 Q 35 25 60 40 T 105 20; M 10 45 Q 35 35 60 25 T 105 30; M 10 50 Q 35 25 60 40 T 105 20" dur="4s" repeatCount="indefinite"/>
+          </path>
+          <path d="M 10 50 Q 35 25 60 40 T 105 20 L 105 70 L 10 70 Z" fill="url(#goldGrad)" opacity="0.15"/>
+
+          <!-- Mini Bar Graphs -->
+          <g transform="translate(10, 80)">
+            <rect x="0" y="15" width="12" height="15" rx="2" fill="#2563FF">
+              <animate attributeName="height" values="15; 25; 15" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="15; 5; 15" dur="3s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="18" y="10" width="12" height="20" rx="2" fill="#7FB2FF">
+              <animate attributeName="height" values="20; 10; 20" dur="2.5s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="10; 20; 10" dur="2.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="36" y="5" width="12" height="25" rx="2" fill="#F5C15D">
+              <animate attributeName="height" values="25; 18; 25" dur="3.5s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="5; 12; 5" dur="3.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="54" y="12" width="12" height="18" rx="2" fill="#2563FF">
+              <animate attributeName="height" values="18; 28; 18" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="12; 2; 12" dur="2.8s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="72" y="8" width="12" height="22" rx="2" fill="#7FB2FF">
+              <animate attributeName="height" values="22; 12; 22" dur="3.2s" repeatCount="indefinite"/>
+              <animate attributeName="y" values="8; 18; 8" dur="3.2s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g>
+
+        <!-- Glass Overlay Reflection Streak -->
+        <path d="M -100 0 L 100 200 L 250 200 L 50 0 Z" fill="#FFFFFF" opacity="0.05" pointer-events="none"/>
+      </g>
+    </g>
+
+    <!-- Laptop Base / Keyboard Deck -->
+    <g transform="translate(170, 350)">
+      <!-- Main Base Polygon -->
+      <path d="M 20 0 L 340 0 L 380 16 L -20 16 Z" fill="url(#laptopBody)" stroke="url(#glassBorder)" stroke-width="1.5"/>
+      <!-- Trackpad -->
+      <rect x="155" y="4" width="70" height="9" rx="3" fill="#071126" stroke="#2563FF" stroke-opacity="0.4" stroke-width="1"/>
+      <!-- Front Lip Glow Line -->
+      <path d="M -18 16 L 378 16" stroke="url(#blueGrad)" stroke-width="2" opacity="0.8" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Foreground Dynamic Particle Stream (Floating Data Sparkles) -->
+  <g opacity="0.8">
+    <circle cx="280" cy="220" r="2.5" fill="#F5C15D" filter="url(#glow)">
+      <animate attributeName="cy" values="220; 200; 220" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="430" cy="240" r="3" fill="#7FB2FF" filter="url(#glow)">
+      <animate attributeName="cy" values="240; 220; 240" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="230" cy="380" r="2" fill="#2563FF" filter="url(#glow)">
+      <animate attributeName="cy" values="380; 360; 380" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="470" cy="370" r="2.5" fill="#F5C15D" filter="url(#glow)">
+      <animate attributeName="cy" values="370; 350; 370" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="120" r="3.5" fill="#FFFFFF" filter="url(#glow)">
+      <animate attributeName="cy" values="120; 105; 120" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1; 0.3; 1" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="310" cy="500" r="2" fill="#7FB2FF" filter="url(#glow)">
+      <animate attributeName="cy" values="500; 485; 500" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="390" cy="490" r="3" fill="#2563FF" filter="url(#glow)">
+      <animate attributeName="cy" values="490; 475; 490" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

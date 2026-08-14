@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="900"
+height="900"
+viewBox="0 0 900 900">
+
+<defs>
+
+<!-- BACKGROUND -->
+
+<radialGradient id="bgGlow"
+cx="50%"
+cy="45%"
+r="70%">
+
+<stop offset="0%"
+stop-color="#173B96"
+stop-opacity=".45"/>
+
+<stop offset="100%"
+stop-color="#071224"
+stop-opacity="1"/>
+
+</radialGradient>
+
+<!-- MAP -->
+
+<linearGradient id="mapGradient"
+x1="0%"
+y1="0%"
+x2="100%"
+y2="100%">
+
+<stop offset="0%"
+stop-color="#285FFF"/>
+
+<stop offset="100%"
+stop-color="#163B96"/>
+
+</linearGradient>
+
+<!-- GOLD -->
+
+<linearGradient id="goldGradient"
+x1="0%"
+y1="0%"
+x2="100%"
+y2="100%">
+
+<stop offset="0%"
+stop-color="#FFE08A"/>
+
+<stop offset="100%"
+stop-color="#D79A22"/>
+
+</linearGradient>
+
+<!-- BLUE -->
+
+<linearGradient id="blueLine"
+x1="0%"
+y1="0%"
+x2="100%"
+y2="100%">
+
+<stop offset="0%"
+stop-color="#72B5FF"/>
+
+<stop offset="100%"
+stop-color="#2563FF"/>
+
+</linearGradient>
+
+<!-- NODE -->
+
+<radialGradient id="nodeGlow">
+
+<stop offset="0%"
+stop-color="#FFFFFF"/>
+
+<stop offset=".45"
+stop-color="#8DC5FF"/>
+
+<stop offset="1"
+stop-color="#2563FF"/>
+
+</radialGradient>
+
+<!-- FILTER -->
+
+<filter id="softGlow"
+x="-100%"
+y="-100%"
+width="300%"
+height="300%">
+
+<feGaussianBlur
+stdDeviation="10"
+result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+<!-- SMALL GLOW -->
+
+<filter id="tinyGlow">
+
+<feGaussianBlur
+stdDeviation="3"
+result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+</defs>
+
+<!-- BACKGROUND -->
+
+<rect
+width="900"
+height="900"
+fill="#071224"/>
+
+<circle
+cx="450"
+cy="430"
+r="360"
+fill="url(#bgGlow)"/>
+
+<!-- GRID -->
+
+<g
+stroke="#1B305B"
+stroke-width="1"
+opacity=".35">
+
+<path d="M0 100H900"/>
+<path d="M0 200H900"/>
+<path d="M0 300H900"/>
+<path d="M0 400H900"/>
+<path d="M0 500H900"/>
+<path d="M0 600H900"/>
+<path d="M0 700H900"/>
+<path d="M0 800H900"/>
+
+<path d="M100 0V900"/>
+<path d="M200 0V900"/>
+<path d="M300 0V900"/>
+<path d="M400 0V900"/>
+<path d="M500 0V900"/>
+<path d="M600 0V900"/>
+<path d="M700 0V900"/>
+<path d="M800 0V900"/>
+
+</g>
+
+<!-- AMBIENT PARTICLES -->
+
+<g opacity=".55">
+
+<circle cx="120" cy="120" r="2" fill="#ffffff"/>
+
+<circle cx="790" cy="170" r="2" fill="#F5C15D"/>
+
+<circle cx="700" cy="770" r="2" fill="#ffffff"/>
+
+<circle cx="210" cy="690" r="2" fill="#2563FF"/>
+
+<circle cx="640" cy="320" r="1.8" fill="#ffffff"/>
+
+<circle cx="330" cy="120" r="1.8" fill="#F5C15D"/>
+
+</g>
+
+<!-- BANGLADESH MAP -->
+
+<path
+id="bangladesh"
+
+fill="url(#mapGradient)"
+
+opacity=".93"
+
+stroke="#8CC6FF"
+
+stroke-width="2"
+
+d="
+
+M352 145
+
+L324 170
+
+L304 222
+
+L289 280
+
+L300 332
+
+L280 380
+
+L293 452
+
+L268 522
+
+L282 590
+
+L320 642
+
+L355 705
+
+L390 760
+
+L455 792
+
+L508 772
+
+L552 720
+
+L583 662
+
+L615 618
+
+L625 560
+
+L612 510
+
+L596 470
+
+L560 442
+
+L545 392
+
+L520 342
+
+L530 286
+
+L508 240
+
+L478 206
+
+L435 172
+
+L392 150
+
+Z
+
+"
+
+filter="url(#softGlow)"/>
+<!-- ========================================= -->
+<!-- NETWORK HUBS -->
+<!-- ========================================= -->
+
+<g id="cities">
+
+<!-- Dhaka -->
+<g transform="translate(452 430)">
+<circle r="18"
+fill="url(#nodeGlow)"
+filter="url(#softGlow)">
+<animate attributeName="r"
+values="16;20;16"
+dur="2.6s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle r="5"
+fill="#ffffff"/>
+
+<text
+x="28"
+y="-18"
+fill="#ffffff"
+font-size="17"
+font-family="Segoe UI"
+font-weight="700">
+Dhaka
+</text>
+
+</g>
+
+<!-- Chattogram -->
+
+<g transform="translate(590 640)">
+<circle r="12"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="2.2s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Khulna -->
+
+<g transform="translate(320 615)">
+<circle r="12"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="2.8s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Rajshahi -->
+
+<g transform="translate(300 340)">
+<circle r="11"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".65;1;.65"
+dur="3.4s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Rangpur -->
+
+<g transform="translate(360 220)">
+<circle r="10"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="2.4s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Sylhet -->
+
+<g transform="translate(555 305)">
+<circle r="10"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".6;1;.6"
+dur="3.2s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Barishal -->
+
+<g transform="translate(450 620)">
+<circle r="10"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".6;1;.6"
+dur="2.7s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Mymensingh -->
+
+<g transform="translate(455 365)">
+<circle r="9"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="2.3s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Cumilla -->
+
+<g transform="translate(525 500)">
+<circle r="8"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="2.9s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Bogura -->
+
+<g transform="translate(385 330)">
+<circle r="8"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="3s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Noakhali -->
+
+<g transform="translate(560 565)">
+<circle r="8"
+fill="url(#nodeGlow)"
+filter="url(#tinyGlow)">
+<animate attributeName="opacity"
+values=".7;1;.7"
+dur="3.5s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Cox's Bazar -->
+
+<g transform="translate(610 760)">
+<circle r="9"
+fill="url(#goldGradient)"
+filter="url(#softGlow)">
+<animate attributeName="r"
+values="8;11;8"
+dur="2.5s"
+repeatCount="indefinite"/>
+</circle>
+</g>
+
+</g>
+<!-- ========================================= -->
+<!-- NETWORK CONNECTIONS -->
+<!-- ========================================= -->
+
+<g
+id="connections"
+stroke="url(#blueLine)"
+stroke-width="3"
+fill="none"
+stroke-linecap="round"
+opacity=".82">
+
+<!-- Dhaka -> Rajshahi -->
+
+<path id="p1"
+d="M452 430
+Q395 395
+300 340"/>
+
+<!-- Dhaka -> Rangpur -->
+
+<path id="p2"
+d="M452 430
+Q410 315
+360 220"/>
+
+<!-- Dhaka -> Sylhet -->
+
+<path id="p3"
+d="M452 430
+Q520 390
+555 305"/>
+
+<!-- Dhaka -> Chattogram -->
+
+<path id="p4"
+d="M452 430
+Q540 510
+590 640"/>
+
+<!-- Dhaka -> Khulna -->
+
+<path id="p5"
+d="M452 430
+Q365 500
+320 615"/>
+
+<!-- Dhaka -> Barishal -->
+
+<path id="p6"
+d="M452 430
+Q445 530
+450 620"/>
+
+<!-- Dhaka -> Cumilla -->
+
+<path id="p7"
+d="M452 430
+Q500 455
+525 500"/>
+
+<!-- Dhaka -> Bogura -->
+
+<path id="p8"
+d="M452 430
+Q425 370
+385 330"/>
+
+<!-- Chattogram -> Cox -->
+
+<path id="p9"
+d="M590 640
+Q615 700
+610 760"/>
+
+<!-- Cumilla -> Noakhali -->
+
+<path id="p10"
+d="M525 500
+Q555 530
+560 565"/>
+
+</g>
+
+
+
+<!-- ========================================= -->
+<!-- MOVING DATA PULSES -->
+<!-- ========================================= -->
+
+<g>
+
+<circle r="5"
+fill="#F5C15D"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="5s"
+repeatCount="indefinite">
+
+<mpath href="#p1"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="4"
+fill="#FFFFFF"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="4s"
+repeatCount="indefinite">
+
+<mpath href="#p2"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="4"
+fill="#7FB2FF"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="4.6s"
+repeatCount="indefinite">
+
+<mpath href="#p3"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="5"
+fill="#F5C15D"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="5.5s"
+repeatCount="indefinite">
+
+<mpath href="#p4"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="4"
+fill="#FFFFFF"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="5.8s"
+repeatCount="indefinite">
+
+<mpath href="#p5"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="4"
+fill="#7FB2FF"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="4.4s"
+repeatCount="indefinite">
+
+<mpath href="#p6"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="4"
+fill="#F5C15D"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="3.8s"
+repeatCount="indefinite">
+
+<mpath href="#p7"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="3"
+fill="#FFFFFF"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="4.3s"
+repeatCount="indefinite">
+
+<mpath href="#p8"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<circle r="3"
+fill="#F5C15D"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="3.5s"
+repeatCount="indefinite">
+
+<mpath href="#p9"/>
+
+</animateMotion>
+
+</circle>
+
+</g>
+<!-- ========================================= -->
+<!-- ABILITY HUB -->
+<!-- ========================================= -->
+
+<g id="abilityHub">
+
+<circle
+cx="450"
+cy="80"
+r="42"
+fill="#0F2C70"
+stroke="#7FB2FF"
+stroke-width="2"
+filter="url(#softGlow)"/>
+
+<circle
+cx="450"
+cy="80"
+r="60"
+fill="none"
+stroke="url(#goldGradient)"
+stroke-width="2"
+opacity=".45">
+
+<animateTransform
+attributeName="transform"
+type="rotate"
+from="0 450 80"
+to="360 450 80"
+dur="18s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<text
+x="450"
+y="86"
+text-anchor="middle"
+fill="#FFFFFF"
+font-size="18"
+font-family="Segoe UI"
+font-weight="700">
+
+ABILITY
+
+</text>
+
+</g>
+
+
+
+<!-- ========================================= -->
+<!-- MAIN CONNECTION -->
+<!-- ========================================= -->
+
+<path
+
+d="M450 122
+Q450 210
+452 412"
+
+stroke="url(#goldGradient)"
+stroke-width="3"
+fill="none"
+opacity=".85"/>
+
+<circle
+r="5"
+fill="#FFFFFF"
+filter="url(#tinyGlow)">
+
+<animateMotion
+dur="4s"
+repeatCount="indefinite">
+
+<mpath href="#p6"/>
+
+</animateMotion>
+
+</circle>
+
+
+
+<!-- ========================================= -->
+<!-- EDUCATION ICONS -->
+<!-- ========================================= -->
+
+<g id="educationNodes">
+
+<!-- School -->
+
+<circle cx="165" cy="235" r="26"
+fill="#163B96"
+stroke="#7FB2FF"
+stroke-width="2"/>
+
+<path
+d="M150 240
+L165 228
+L180 240
+V252
+H150
+Z"
+
+fill="#FFFFFF"/>
+
+<!-- Trophy -->
+
+<circle cx="730" cy="250" r="26"
+fill="#163B96"
+stroke="#F5C15D"
+stroke-width="2"/>
+
+<path
+d="M722 235
+H738
+V246
+C738 253 733 258 730 259
+C727 258 722 253 722 246
+Z"
+
+fill="#F5C15D"/>
+
+<!-- Science -->
+
+<circle cx="160" cy="620" r="26"
+fill="#163B96"
+stroke="#7FB2FF"
+stroke-width="2"/>
+
+<path
+d="M160 606
+V624
+L151 639
+H169
+L160 624"
+
+stroke="#FFFFFF"
+stroke-width="2"
+fill="none"/>
+
+<!-- AI -->
+
+<circle cx="730" cy="620" r="26"
+fill="#163B96"
+stroke="#7FB2FF"
+stroke-width="2"/>
+
+<rect
+x="720"
+y="610"
+width="20"
+height="20"
+rx="4"
+fill="#FFFFFF"/>
+
+</g>
+
+
+
+<!-- ========================================= -->
+<!-- ICON CONNECTIONS -->
+<!-- ========================================= -->
+
+<g
+stroke="#4FA6FF"
+stroke-width="2"
+opacity=".45"
+fill="none">
+
+<path d="M190 235 Q260 260 320 340"/>
+
+<path d="M704 250 Q630 270 555 305"/>
+
+<path d="M185 620 Q250 610 320 615"/>
+
+<path d="M704 620 Q650 620 590 640"/>
+
+</g>
+<!-- ========================================= -->
+<!-- FLOATING PARTICLES -->
+<!-- ========================================= -->
+
+<g id="particles">
+
+<circle cx="180" cy="120" r="2.5" fill="#FFFFFF" opacity=".8">
+<animate attributeName="cy" values="120;105;120" dur="5s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values=".2;1;.2" dur="5s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="720" cy="160" r="2" fill="#F5C15D">
+<animate attributeName="cy" values="160;145;160" dur="4s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="760" cy="520" r="2.5" fill="#7FB2FF">
+<animate attributeName="cy" values="520;500;520" dur="6s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="120" cy="720" r="2" fill="#FFFFFF">
+<animate attributeName="cy" values="720;700;720" dur="5.5s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="620" cy="760" r="2" fill="#F5C15D">
+<animate attributeName="cy" values="760;742;760" dur="4.6s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="340" cy="90" r="1.8" fill="#7FB2FF">
+<animate attributeName="cy" values="90;74;90" dur="4.5s" repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+
+
+<!-- ========================================= -->
+<!-- AMBIENT GLOW -->
+<!-- ========================================= -->
+
+<circle
+cx="450"
+cy="450"
+r="290"
+fill="#2563FF"
+opacity=".035">
+
+<animate
+attributeName="opacity"
+values=".02;.06;.02"
+dur="7s"
+repeatCount="indefinite"/>
+
+</circle>
+
+
+
+<!-- ========================================= -->
+<!-- TITLE -->
+<!-- ========================================= -->
+
+<text
+
+x="450"
+
+y="860"
+
+text-anchor="middle"
+
+fill="#FFFFFF"
+
+font-size="26"
+
+font-family="Segoe UI"
+
+font-weight="700">
+
+Bangladesh Education Network
+
+</text>
+
+<text
+
+x="450"
+
+y="885"
+
+text-anchor="middle"
+
+fill="#7FB2FF"
+
+font-size="15"
+
+font-family="Segoe UI">
+
+Powered by ABILITY
+
+</text>
+
+</svg>

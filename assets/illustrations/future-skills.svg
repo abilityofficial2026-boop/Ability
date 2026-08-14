@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#0E1A36"/>
+      <stop offset="50%" stop-color="#071126"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#2563FF" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#2563FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#071126" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#F5C15D" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F5C15D" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="glassRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7FB2FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2563FF" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="laptopBase" x1="200" y1="480" x2="500" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563FF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#071126" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7FB2FF" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="220" y1="200" x2="480" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E1A36"/>
+      <stop offset="100%" stop-color="#071126"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2CC"/>
+      <stop offset="50%" stop-color="#F5C15D"/>
+      <stop offset="100%" stop-color="#C68A12"/>
+    </linearGradient>
+
+    <filter id="ultraBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0.08   0 0 0 0 0.3   0 0 0 0.7 0"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <g id="circuitNode">
+      <circle cx="0" cy="0" r="3.5" fill="#2563FF" stroke="#7FB2FF" stroke-width="1.5" filter="url(#softGlow)"/>
+    </g>
+    <g id="codeBracket">
+      <path d="M 0 -8 L -4 -4 L -4 4 L 0 8 M 6 -8 L 10 -4 L 10 4 L 6 8" fill="none" stroke="#7FB2FF" stroke-width="1.5" opacity="0.6"/>
+    </g>
+    <g id="dataNode">
+      <rect x="-12" y="-12" width="24" height="24" rx="6" fill="#071126" stroke="url(#glassRim)" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#F5C15D" filter="url(#softGlow)"/>
+    </g>
+    
+    <clipPath id="screenClip">
+      <rect x="220" y="200" width="260" height="210" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- 1. BACKGROUND LAYER -->
+  <g id="Background-Layer">
+    <rect width="700" height="700" fill="url(#spaceBg)"/>
+    <circle cx="350" cy="350" r="320" fill="url(#blueGlow)" filter="url(#ultraBlur)"/>
+    <circle cx="260" cy="280" r="180" fill="url(#goldGlow)" filter="url(#ultraBlur)">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="420" r="190" fill="url(#blueGlow)" filter="url(#ultraBlur)">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 2. ORBITAL & CIRCUIT NETWORK LAYER -->
+  <g id="Network-Layer">
+    <!-- Orbital Rings -->
+    <ellipse cx="350" cy="340" rx="260" ry="90" fill="none" stroke="url(#glassRim)" stroke-width="1" stroke-opacity="0.3" transform="rotate(-15 350 340)" stroke-dasharray="6 10"/>
+    <ellipse cx="350" cy="340" rx="290" ry="100" fill="none" stroke="#7FB2FF" stroke-width="1" stroke-opacity="0.25" transform="rotate(20 350 340)" stroke-dasharray="4 14"/>
+
+    <!-- Connecting Network Lines & Nodes -->
+    <g stroke="#7FB2FF" stroke-width="1" stroke-opacity="0.4" fill="none">
+      <path d="M 140 280 L 220 300 L 220 200"/>
+      <path d="M 560 280 L 480 300 L 480 200"/>
+      <path d="M 180 500 L 290 470 L 350 510"/>
+      <path d="M 520 500 L 410 470 L 350 510"/>
+    </g>
+
+    <!-- Circuit Nodes -->
+    <use href="#circuitNode" x="140" y="280"/>
+    <use href="#circuitNode" x="560" y="280"/>
+    <use href="#circuitNode" x="180" y="500"/>
+    <use href="#circuitNode" x="520" y="500"/>
+    
+    <!-- Floating Tech Elements -->
+    <use href="#codeBracket" x="110" y="250">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+    </use>
+    <use href="#codeBracket" x="580" y="250">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4.5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#dataNode" x="130" y="420"/>
+    <use href="#dataNode" x="570" y="420"/>
+  </g>
+
+  <!-- 3. MAIN WORKSPACE / LAPTOP LAYER -->
+  <g id="Laptop-Layer">
+    <!-- Floating Wrapper -->
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="6s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Laptop Ground Shadow -->
+    <ellipse cx="350" cy="550" rx="140" ry="20" fill="#030712" filter="url(#ultraBlur)" opacity="0.8">
+      <animate attributeName="rx" values="140;120;140" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- LAPTOP SCREEN ASSEMBLY -->
+    <rect x="210" y="190" width="280" height="230" rx="14" fill="#071126" stroke="url(#glassRim)" stroke-width="2.5" filter="url(#dropShadow)"/>
+    <rect x="220" y="200" width="260" height="210" rx="8" fill="url(#screenGrad)"/>
+
+    <!-- INSIDE SCREEN: UI, Code, AI Interface & Dashboard -->
+    <g clip-path="url(#screenClip)">
+      <!-- AI Neural Network Wave in Screen Background -->
+      <path d="M 220 305 Q 280 270, 350 305 T 480 305" fill="none" stroke="#2563FF" stroke-width="2" opacity="0.4" filter="url(#softGlow)"/>
+      <path d="M 220 325 Q 280 290, 350 325 T 480 325" fill="none" stroke="#7FB2FF" stroke-width="1.5" opacity="0.3"/>
+
+      <!-- Clean Code Editor Lines -->
+      <g stroke-linecap="round" stroke-width="3">
+        <line x1="240" y1="225" x2="280" y2="225" stroke="#F5C15D"/>
+        <line x1="290" y1="225" x2="340" y2="225" stroke="#7FB2FF"/>
+        
+        <line x1="255" y1="245" x2="330" y2="245" stroke="#FFFFFF" opacity="0.8"/>
+        <line x1="340" y1="245" x2="380" y2="245" stroke="#2563FF"/>
+        
+        <line x1="255" y1="265" x2="300" y2="265" stroke="#7FB2FF"/>
+        <line x1="310" y1="265" x2="360" y2="265" stroke="#F5C15D" opacity="0.9"/>
+      </g>
+
+      <!-- Analytics Dashboard Mini-Chart -->
+      <g transform="translate(240, 350)">
+        <rect x="0" y="-10" width="100" height="50" rx="6" fill="#071126" stroke="url(#glassRim)" stroke-width="1" opacity="0.8"/>
+        <!-- Chart line blinking/updating -->
+        <path d="M 10 25 L 30 15 L 50 20 L 70 5 L 90 12" fill="none" stroke="#F5C15D" stroke-width="2" filter="url(#softGlow)">
+          <animate attributeName="d" values="M 10 25 L 30 15 L 50 20 L 70 5 L 90 12; M 10 22 L 30 18 L 50 12 L 70 8 L 90 15; M 10 25 L 30 15 L 50 20 L 70 5 L 90 12" dur="5s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- AI Core Processing Badge -->
+      <g transform="translate(365, 345)">
+        <circle cx="20" cy="15" r="22" fill="#071126" stroke="#2563FF" stroke-width="1.5" filter="url(#softGlow)"/>
+        <circle cx="20" cy="15" r="10" fill="#2563FF" opacity="0.6">
+          <animate attributeName="r" values="8;13;8" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="20" cy="15" r="4" fill="#F5C15D"/>
+      </g>
+    </g>
+
+    <!-- Screen Bezel Camera -->
+    <circle cx="350" cy="198" r="2" fill="#7FB2FF" opacity="0.8"/>
+
+    <!-- LAPTOP BASE & KEYBOARD DECK -->
+    <path d="M 170 520 L 530 520 L 500 480 L 200 480 Z" fill="url(#laptopBase)" stroke="url(#glassRim)" stroke-width="2" filter="url(#dropShadow)"/>
+    <path d="M 165 524 L 535 524 C 542 524, 545 528, 540 532 L 530 540 L 170 540 L 160 532 C 155 528, 158 524, 165 524 Z" fill="#071126" stroke="url(#glassRim)" stroke-width="1.5"/>
+    
+    <!-- Trackpad Highlight -->
+    <rect x="315" y="528" width="70" height="6" rx="3" fill="#2563FF" opacity="0.4"/>
+  </g>
+
+  <!-- 4. FLOATING ECOSYSTEM ICONS & NODES LAYER -->
+  <g id="Ecosystem-Layer">
+    <!-- Cloud Computing Icon (Top Left) -->
+    <g transform="translate(150, 160)">
+      <animateTransform attributeName="transform" type="translate" values="150 160; 150 152; 150 160" dur="5s" repeatCount="indefinite" additive="sum"/>
+      <rect x="-25" y="-15" width="50" height="30" rx="15" fill="#071126" stroke="url(#glassRim)" stroke-width="1.5" filter="url(#dropShadow)"/>
+      <path d="M -10 5 L 0 -5 L 10 5" fill="none" stroke="#7FB2FF" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 0 -2 L 0 10" fill="none" stroke="#7FB2FF" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Cybersecurity Shield (Top Right) -->
+    <g transform="translate(550, 170)">
+      <animateTransform attributeName="transform" type="translate" values="550 170; 550 178; 550 170" dur="6s" repeatCount="indefinite" additive="sum"/>
+      <path d="M 0 -18 L 15 -10 L 15 5 C 15 15, 0 22, 0 22 C 0 22, -15 15, -15 5 L -15 -10 Z" fill="#071126" stroke="url(#goldAccent)" stroke-width="2" filter="url(#softGlow)"/>
+      <path d="M -5 0 L -1 4 L 6 -3" fill="none" stroke="#F5C15D" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Database Cylinders (Mid Right) -->
+    <g transform="translate(560, 360)">
+      <animateTransform attributeName="transform" type="translate" values="560 360; 560 354; 560 360" dur="5.5s" repeatCount="indefinite" additive="sum"/>
+      <ellipse cx="0" cy="-15" rx="18" ry="7" fill="#071126" stroke="url(#glassRim)" stroke-width="1.5"/>
+      <path d="M -18 -15 L -18 15 C -18 19, 18 19, 18 15 L 18 -15" fill="#071126" stroke="url(#glassRim)" stroke-width="1.5"/>
+      <ellipse cx="0" cy="0" rx="18" ry="7" fill="#071126" stroke="url(#glassRim)" stroke-width="1" opacity="0.6"/>
+      <ellipse cx="0" cy="15" rx="18" ry="7" fill="#071126" stroke="url(#glassRim)" stroke-width="1" opacity="0.6"/>
+    </g>
+
+    <!-- Floating Binary / Data Particles -->
+    <g fill="#7FB2FF" opacity="0.7" font-family="system-ui" font-weight="700" font-size="11">
+      <text x="230" y="140">01</text>
+      <text x="440" y="130">AI</text>
+      <text x="120" y="370">API</text>
+      <text x="540" y="480">10</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -6; 0 0" dur="4s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- 5. LIGHTING & AMBIENT GLOW LAYER -->
+  <g id="Lighting-Layer" pointer-events="none">
+    <circle cx="350" cy="305" r="140" fill="url(#goldGlow)" filter="url(#ultraBlur)" opacity="0.4">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

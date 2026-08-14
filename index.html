@@ -3,26 +3,539 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABILITY | Recognizing Excellence, Inspiring Futures</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Style -->
+    <title>ABILITY | Building Bangladesh's Next Generation of Student Leaders</title>
+    <meta name="description" content="ABILITY is an educational organization dedicated to discovering talent, empowering schools and creating opportunities through competitions, mentorship, science and innovation.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- ================= BACKGROUND ================= -->
+    <div class="background-grid"></div>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+    <div class="mouse-glow"></div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container text-center">
-            <div class="hero-logo-box">
-                <img src="assets/images/logo.jpeg" alt="ABILITY Logo">
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="ABILITY Logo">
+                    <span>ABILITY</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pillars">Initiatives</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="english-championship.html" class="btn btn-outline">English Championship</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+                <div class="menu-btn" id="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <!-- HERO LEFT -->
+            <div class="hero-content">
+                <div class="section-tag">
+                    Building Bangladesh's Educational Future
+                </div>
+                <h1 class="hero-title">
+                    Building <span>Bangladesh's</span> Next Generation of Student Leaders.
+                </h1>
+                <p class="hero-description">
+                    ABILITY is an educational organization dedicated to recognising talent, empowering schools and creating opportunities through academic competitions, rural development, science laboratories and future-ready skill development.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Explore Our Vision</a>
+                    <a href="english-championship.html" class="btn btn-outline">English Championship 2026</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <h3>4</h3>
+                        <p>Core Pillars</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>2026</h3>
+                        <p>Launch Year</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>01</h3>
+                        <p>Flagship Championship</p>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title">ABILITY</h1>
-            <p class="hero-subtitle">RECOGNIZING EXCELLENCE INSPIRING FUTURES</p>
+            <!-- HERO RIGHT / KNOWLEDGE NETWORK -->
+            <div class="hero-visual"> 
+                <div class="knowledge-network">
+                    <div class="ambient ambient-1"></div>
+                    <div class="ambient ambient-2"></div>
+                    <div class="ambient ambient-3"></div>
+                    <!-- Center Circle -->
+                    <div class="network-center">
+                        <div class="center-glow"></div>
+                        <div class="center-circle">
+                            <div class="orb-ring"></div>
+                            <img src="assets/images/logo.png" alt="ABILITY Logo">
+                        </div>
+                        <h4>ABILITY</h4>
+                    </div>
+                    <!-- Nodes -->
+                    <div class="network-node node-1">
+                        <div class="node-icon">
+                            <img src="assets/icons/championship.svg" alt="Championship">
+                        </div>
+                        <h5>Championships</h5>
+                        <span>Academic Competitions</span>
+                    </div>
+                    <div class="network-node node-2">
+                        <div class="node-icon">
+                            <img src="assets/icons/science.svg" alt="Science Lab">
+                        </div>
+                        <h5>Science Labs</h5>
+                        <span>Practical Learning</span>
+                    </div>
+                    <div class="network-node node-3">
+                        <div class="node-icon">
+                            <img src="assets/icons/rural.svg" alt="Rural Schools">
+                        </div>
+                        <h5>Rural Schools</h5>
+                        <span>Equal Opportunity</span>
+                    </div>
+                    <div class="network-node node-4">
+                        <div class="node-icon">
+                            <img src="assets/icons/skills.svg" alt="Future Skills">
+                        </div>
+                        <h5>Future Skills</h5>
+                        <span>Innovation & Tech</span>
+                    </div>
+                    <!-- Connection Lines -->
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                    <span class="line line-4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ================= ONGOING EVENT FEATURE BANNER ================= -->
+    <section class="ongoing-event-section reveal">
+        <div class="container">
+            <div class="ongoing-event-card">
+                <div class="event-card-header">
+                    <span class="status-badge live">🔴 REGISTRATION OPEN</span>
+                    <span class="event-tag">FLAGSHIP ACADEMIC FESTIVAL 2026</span>
+                </div>
+                
+                <div class="event-card-body">
+                    <h2>ABILITY English Championship 2026</h2>
+                    <p>Rangpur Division's premier English festival featuring Batch Olympiads, Public Speaking, Literature Writing, Team Case Solving, Celebrity Sessions, Gaming Arena, and Grand Stage Convocation!</p>
+                    
+                    <div class="event-meta-info">
+                        <span>📅 <strong>Event Date:</strong> September 12, 2026</span>
+                        <span>📍 <strong>Location:</strong> Dinajpur, Rangpur Division</span>
+                    </div>
+                </div>
+
+                <div class="event-card-actions">
+                    <a href="english-championship.html" class="btn btn-primary btn-large">Visit Ongoing Event</a>
+                    <a href="register.html" class="btn btn-outline">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= IMPACT STATISTICS ================= -->
+    <section class="impact reveal" id="impact">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="section-tag">OUR IMPACT</span>
+                <h2>Building Bangladesh's <span>Educational Future</span></h2>
+                <p>
+                    Every great movement begins with a vision. ABILITY is committed to discovering talent, empowering schools and creating opportunities for students across Bangladesh.
+                </p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <img src="assets/icons/rocket.svg" alt="District Vision">
+                    </div>
+                    <h3>64</h3>
+                    <span>District Vision</span>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <img src="assets/icons/rural.svg" alt="Schools Target">
+                    </div>
+                    <h3>1,000+</h3>
+                    <span>Schools Target</span>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <img src="assets/icons/excellence.svg" alt="Students Vision">
+                    </div>
+                    <h3>200K+</h3>
+                    <span>Students Vision</span>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <img src="assets/icons/sparkle.svg" alt="National Goal">
+                    </div>
+                    <h3>2030</h3>
+                    <span>National Goal</span>
+                </div>
+            </div>
+            <div class="impact-message">
+                <h3>Every Great Nation Begins With Education.</h3>
+                <p>
+                    ABILITY believes talent exists in every classroom, every village and every district. Our mission is to ensure every student receives opportunities to dream, compete and succeed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ABILITY ================= -->
+    <section class="about reveal" id="about">
+        <div class="container about-grid">
+            <!-- LEFT VISUAL -->
+            <div class="about-visual">
+                <div class="vision-circle">
+                    <div class="vision-core">
+                        <img src="assets/images/logo.png" alt="ABILITY Logo">
+                    </div>
+                    <span class="orbit orbit-1">
+                        <img src="assets/icons/championship.svg" alt="Championship">
+                    </span>
+                    <span class="orbit orbit-2">
+                        <img src="assets/icons/science.svg" alt="Science Lab">
+                    </span>
+                    <span class="orbit orbit-3">
+                        <img src="assets/icons/skills.svg" alt="Future Skills">
+                    </span>
+                    <span class="orbit orbit-4">
+                        <img src="assets/icons/rural.svg" alt="Rural Schools">
+                    </span>
+                </div>
+            </div>
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+                <span class="section-tag">WHO WE ARE</span>
+                <h2>More Than An Organisation.<br><span>A Vision For Every Student.</span></h2>
+                <p>
+                    ABILITY is an educational organization dedicated to recognising excellence, creating opportunities and inspiring the next generation of students across Bangladesh.
+                </p>
+                <p>
+                    We believe talent exists in every district, classroom, and student. Our mission is to bridge the opportunity gap through academic championships, rural educational development, science laboratories and future-ready skill programmes.
+                </p>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="assets/icons/opportunity.svg" alt="Equal Opportunity">
+                        </div>
+                        <h4>Equal Opportunity</h4>
+                        <span>Every student deserves access to quality education.</span>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="assets/icons/excellence.svg" alt="Academic Excellence">
+                        </div>
+                        <h4>Academic Excellence</h4>
+                        <span>Recognising and celebrating outstanding talent.</span>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="assets/icons/rural.svg" alt="Rural Transformation">
+                        </div>
+                        <h4>Rural Transformation</h4>
+                        <span>Empowering underserved schools with mentorship.</span>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <img src="assets/icons/skills.svg" alt="Future Skills">
+                        </div>
+                        <h4>Future Skills</h4>
+                        <span>Preparing students for tomorrow's world.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CORE PILLARS ================= -->
+    <section class="pillars reveal" id="pillars">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="section-tag">OUR FOUNDATION</span>
+                <h2>The Four Pillars That Shape <span>ABILITY.</span></h2>
+                <p>
+                    Every initiative we build is guided by four interconnected pillars that empower students, strengthen schools and prepare Bangladesh's next generation of leaders.
+                </p>
+            </div>
+            <div class="pillars-layout">
+                <!-- LEFT COLUMN -->
+                <div class="pillar-column">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <img src="assets/icons/championship.svg" alt="Academic Excellence">
+                        </div>
+                        <h3>Academic Excellence</h3>
+                        <p>Discovering, recognising and celebrating talented students through high-quality academic competitions.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <img src="assets/icons/rural.svg" alt="Rural Transformation">
+                        </div>
+                        <h3>Rural Transformation</h3>
+                        <p>Empowering underserved schools through mentorship, opportunity and educational development.</p>
+                    </div>
+                </div>
+                <!-- CENTER GRAPHIC -->
+                <div class="pillar-center">
+                    <img src="assets/illustrations/core-pillars.svg" alt="ABILITY Core Pillars">
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="pillar-column">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <img src="assets/icons/opportunity.svg" alt="Equal Opportunity">
+                        </div>
+                        <h3>Equal Opportunity</h3>
+                        <p>Ensuring every learner has access to meaningful opportunities regardless of location or background.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <img src="assets/icons/skills.svg" alt="Future Skills">
+                        </div>
+                        <h3>Future Skills</h3>
+                        <p>Preparing students for tomorrow through innovation, technology and leadership development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ENGLISH CHAMPIONSHIP ================= -->
+    <section class="championship-home reveal" id="championship">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="section-tag">FEATURED PROGRAMME</span>
+                <h2>English Championship <span>2026</span></h2>
+                <p>
+                    A premier regional English festival bringing together talented students for two unforgettable days of competitions, learning, leadership and celebration.
+                </p>
+            </div>
+            <!-- COMPETITION SEGMENT -->
+            <div class="day-card">
+                <div class="day-top">
+                    <span class="day-badge">SEGMENT 1</span>
+                    <h3>Competition Segment</h3>
+                </div>
+                <!-- PART A -->
+                <div class="event-box">
+                    <div class="event-head">
+                        <h4>Part A</h4>
+                        <span>Title Championship (Mr. & Miss Englishpedia)</span>
+                    </div>
+                    <div class="event-steps">
+                        <div class="step-card">
+                            <div class="step-number">01</div>
+                            <h5>Batch Olympiad</h5>
+                            <p>Preliminary written competition for batch-wise qualification.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">02</div>
+                            <h5>Advanced Title Testing</h5>
+                            <p>Vocabulary, spelling, creative writing and challenge rounds.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">03</div>
+                            <h5>Grand Convocation</h5>
+                            <p>Final stage to crown Mr. & Miss Englishpedia.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- PART B -->
+                <div class="event-box">
+                    <div class="event-head">
+                        <h4>Part B</h4>
+                        <span>Open Individual & Team Competitions</span>
+                    </div>
+                    <div class="pill-list">
+                        <span class="event-pill">🎤 Public Speaking</span>
+                        <span class="event-pill">🧩 Case Solving</span>
+                        <span class="event-pill">✍ Literature Writing</span>
+                    </div>
+                </div>
+            </div>
+            <!-- FESTIVAL SEGMENT -->
+            <div class="day-card">
+                <div class="day-top">
+                    <span class="day-badge">SEGMENT 2</span>
+                    <h3>Festival Segment</h3>
+                </div>
+                <div class="pill-list festival">
+                    <span class="event-pill">⭐ Meet the Celebrity</span>
+                    <span class="event-pill">🎭 Cultural Events</span>
+                    <span class="event-pill">🎮 Gaming Round</span>
+                    <span class="event-pill">🗣 Language Workshop</span>
+                    <span class="event-pill">📚 Literature Workshop</span>
+                    <span class="event-pill">🏆 Prize Giving Ceremony</span>
+                </div>
+            </div>
+            <div class="championship-buttons">
+                <a href="english-championship.html" class="btn btn-primary">Learn More</a>
+                <a href="register.html" class="btn btn-outline">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ROADMAP ================= -->
+    <section class="roadmap-home reveal" id="roadmap">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="section-tag">OUR JOURNEY</span>
+                <h2>Building Bangladesh's Educational <span>Future, Step by Step.</span></h2>
+                <p>
+                    Every milestone of ABILITY has been carefully planned to create long-term impact. From launching our first championship in Dinajpur to establishing innovation hubs across Bangladesh, our roadmap reflects a vision that grows with every student we inspire.
+                </p>
+            </div>
+            <div class="roadmap-layout">
+                <div class="roadmap-image">
+                    <img src="assets/illustrations/roadmap.svg" alt="ABILITY Roadmap">
+                </div>
+                <div class="roadmap-timeline">
+                    <div class="roadmap-item active">
+                        <div class="roadmap-year">2026</div>
+                        <div class="roadmap-content">
+                            <h3>Foundation Year</h3>
+                            <p>Launching ABILITY with the English Championship, establishing partnerships with schools, building the first nationwide student community.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-year">2027</div>
+                        <div class="roadmap-content">
+                            <h3>Science & Innovation</h3>
+                            <p>School Science Labs, STEM programmes, regional competitions and future skills initiatives.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-year">2028</div>
+                        <div class="roadmap-content">
+                            <h3>Rural Impact</h3>
+                            <p>Expanding educational opportunities to underserved schools across Bangladesh.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-year">2030+</div>
+                        <div class="roadmap-content">
+                            <h3>National Educational Ecosystem</h3>
+                            <p>A connected platform where competitions, innovation, mentorship and leadership development become accessible for every student.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOUNDER & STRATEGIC NETWORK ================= -->
+    <section class="leadership-home reveal" id="team">
+        <div class="container">
+            <div class="section-heading center">
+                <span class="section-tag">LEADERSHIP & EXECUTION</span>
+                <h2>Founder Profile & <span>Strategic Youth Network</span></h2>
+            </div>
+            <div class="leadership-grid">
+                <!-- FOUNDER CARD -->
+                <div class="leadership-card">
+                    <div class="leadership-img">
+                        <img src="assets/images/founderprofile.jpeg" alt="Nobel Mahfuz">
+                    </div>
+                    <div class="leadership-content">
+                        <span class="leadership-badge">FOUNDER</span>
+                        <h3>Nobel Mahfuz</h3>
+                        <p>
+                            Visionary behind ABILITY, dedicated to transforming regional academic culture, installing advanced ABILITY Science Labs, and connecting rural students with national university mentorship networks.
+                        </p>
+                    </div>
+                </div>
+                <!-- STRATEGIC PARTNER CARD -->
+                <div class="leadership-card">
+                    <div class="leadership-img partner-img">
+                        <img src="assets/images/dds.jpg" alt="Dinajpur Debating Society (DDS)">
+                    </div>
+                    <div class="leadership-content">
+                        <span class="leadership-badge">OFFICIAL STRATEGIC YOUTH PARTNER</span>
+                        <h3>Dinajpur Debating Society (DDS)</h3>
+                        <p>
+                            A premier multidisciplinary youth platform consisting of six dynamic wings (Debate, Cultural, Co-Curricular, IT & Graphics, Model United Nations, and Media Cell), mobilizing student leaders to drive high-impact academic campaigns and brand promotions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="ABILITY Logo">
+                        <span>ABILITY</span>
+                    </a>
+                    <p>AimXcel Bangladesh Institute for Learning, Innovation & Transformative Youth</p>
+                    <span>Dinajpur, Rangpur Division, Bangladesh</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#pillars">Pillars</a></li>
+                        <li><a href="english-championship.html">English Championship</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><strong>Headquarters:</strong> Moddho Balubari (Food office Road), Sadar, Dinajpur</p>
+                    <p><strong>Email:</strong> abilityofficial.2026@gmail.com</p>
+                    <p><strong>Founder:</strong> Nobel Mahfuz (01758418919)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ABILITY. All Rights Reserved. "Recognizing Excellence, Inspiring Futures."</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

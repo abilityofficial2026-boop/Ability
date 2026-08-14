@@ -1,0 +1,147 @@
+<svg viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0A101F"/>
+      <stop offset="100%" stop-color="#04060B"/>
+    </linearGradient>
+
+    <!-- Glow & Lighting Filters -->
+    <filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur1"/>
+      <feGaussianBlur stdDeviation="32" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Golden Network Arc Gradient -->
+    <linearGradient id="goldArc" x1="430" y1="120" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FBBF24" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)" rx="24"/>
+  
+  <!-- Technical Grid Overlay -->
+  <path d="M0 100H1200 M0 200H1200 M0 300H1200 M0 400H1200 M0 500H1200 M0 600H1200 M0 700H1200" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M150 0V800 M300 0V800 M450 0V800 M600 0V800 M750 0V800 M900 0V800 M1050 0V800" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- Ambient Glows -->
+  <circle cx="430" cy="120" r="180" fill="#F59E0B" fill-opacity="0.12" filter="url(#coreGlow)"/>
+  <circle cx="620" cy="420" r="280" fill="#3B82F6" fill-opacity="0.08" filter="url(#coreGlow)"/>
+
+  <!-- EXACT BANGLADESH MAP OUTLINE (Matching reference map proportions & borders precisely) -->
+  <g class="bangladesh-map-exact" transform="translate(140, 30) scale(1.05)">
+    <!-- Main Geographic Contour Path -->
+    <path d="
+      M 480 75
+      C 465 80, 445 95, 425 110
+      C 410 105, 395 115, 380 130
+      C 360 125, 345 135, 330 150
+      C 310 145, 295 155, 280 170
+      C 260 175, 245 190, 240 210
+      C 220 215, 205 230, 200 250
+      C 185 260, 175 280, 170 300
+      C 155 310, 145 330, 150 350
+      C 135 365, 140 390, 155 410
+      C 140 425, 145 450, 165 470
+      C 180 480, 190 500, 200 520
+      C 190 535, 195 560, 215 585
+      C 235 610, 265 630, 300 645
+      C 315 660, 335 675, 355 690
+      C 370 685, 385 695, 395 710
+      C 415 695, 435 685, 455 670
+      C 475 655, 495 635, 515 605
+      C 535 575, 555 535, 575 495
+      C 590 465, 605 425, 610 385
+      C 615 355, 605 325, 590 295
+      C 600 280, 595 255, 580 235
+      C 565 215, 545 200, 525 185
+      C 510 170, 495 155, 475 145
+      C 455 135, 435 125, 410 105
+      C 395 95, 385 90, 480 75
+      Z" 
+      fill="#0B132B" 
+      fill-opacity="0.85" 
+      stroke="#3B82F6" 
+      stroke-width="2.5" 
+      stroke-opacity="0.6"
+      filter="url(#softGlow)"
+    />
+
+    <!-- Internal River Delta Curves (Padma / Jamuna / Meghna) -->
+    <path d="M 430 120 Q 450 280 525 410 T 605 540" stroke="#1D4ED8" stroke-width="1.5" stroke-dasharray="5 5" stroke-opacity="0.6" fill="none"/>
+    <path d="M 430 120 Q 525 180 580 140" stroke="#1D4ED8" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+    <path d="M 525 410 Q 590 450 670 390" stroke="#1D4ED8" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+  </g>
+
+  <!-- Radiating Optical Fiber Arcs Across the Map -->
+  <g class="network-arcs" stroke-width="1.8" fill="none">
+    <path d="M 430 120 Q 490 260 525 410" stroke="url(#goldArc)" filter="url(#softGlow)" stroke-width="2.2"/>
+    <path d="M 430 120 Q 350 300 290 460" stroke="url(#goldArc)"/>
+    <path d="M 430 120 Q 530 140 655 155" stroke="#3B82F6" stroke-opacity="0.7"/>
+    <path d="M 525 410 Q 615 450 705 470" stroke="url(#goldArc)" stroke-width="2"/>
+    <path d="M 525 410 Q 450 540 435 680" stroke="#3B82F6" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Divisional & Major District Nodes (Clean, No Clutter) -->
+  <g class="map-nodes" fill="#60A5FA">
+    <!-- Dhaka (Central) -->
+    <circle cx="525" cy="410" r="5" filter="url(#softGlow)"/>
+    <!-- Chittagong (Southeast) -->
+    <circle cx="705" cy="470" r="4.5" filter="url(#softGlow)"/>
+    <!-- Sylhet (Northeast) -->
+    <circle cx="655" cy="155" r="4"/>
+    <!-- Khulna (Southwest) -->
+    <circle cx="290" cy="460" r="4"/>
+    <!-- Barisal (South) -->
+    <circle cx="435" cy="680" r="3.5"/>
+    <!-- Rajshahi (West) -->
+    <circle cx="360" cy="320" r="3.5"/>
+  </g>
+
+  <!-- DINAJPUR EPICENTER (Northern Apex HQ) -->
+  <g class="dinajpur-epicenter" transform="translate(430, 120)">
+    <!-- Pulsing Radar Rings -->
+    <circle r="38" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.4" fill="none">
+      <animate attributeName="r" values="18;45;18" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="24" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.7" fill="none">
+      <animate attributeName="r" values="10;30;10" dur="3s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.9;0;0.9" dur="3s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Core Node -->
+    <circle r="7" fill="#FBBF24" filter="url(#coreGlow)"/>
+    <circle r="3" fill="#FFFFFF"/>
+
+    <!-- Dinajpur HQ Label -->
+    <g transform="translate(16, -20)">
+      <rect width="115" height="26" rx="4" fill="#070B14" fill-opacity="0.9" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="58" y="17" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" text-anchor="middle">DINAJPUR</text>
+    </g>
+  </g>
+
+  <!-- ABILITY BRANDING HEADING (Placed cleanly in the Top Right Corner, OUTSIDE the map) -->
+  <g class="top-right-heading" transform="translate(860, 90)" filter="url(#softGlow)">
+    <!-- Decorative background accent pill -->
+    <rect width="280" height="75" rx="12" fill="#0B132B" fill-opacity="0.8" stroke="#3B82F6" stroke-width="1.5" stroke-opacity="0.4"/>
+    <path d="M 16 22 H 50" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="16" y="48" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="900" letter-spacing="3">ABILITY</text>
+    <text x="16" y="64" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1.5">NATIONAL DIGITAL NETWORK</text>
+    <circle cx="256" cy="38" r="5" fill="#10B981"/>
+  </g>
+</svg>

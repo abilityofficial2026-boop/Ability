@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+<linearGradient id="rocketBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#7FB2FF"></stop>
+<stop offset="100%" stop-color="#2563FF"></stop>
+</linearGradient>
+</defs>
+
+<circle cx="32" cy="32" r="26" fill="#0F1D38"></circle>
+
+<path d="M32 16
+C38 18 42 24 42 33
+L37 38
+L32 46
+L27 38
+L22 33
+C22 24 26 18 32 16Z" fill="url(#rocketBlue)"></path>
+
+<circle cx="32" cy="28" r="3" fill="#F5C15D"></circle>
+
+<path d="M29 46L32 54L35 46" fill="#F5C15D"></path>
+
+</svg>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Ability English Championship 2026</title>
+    <meta name="description" content="Official registration form for Ability English Championship 2026. Join the flagship academic festival in Dinajpur!">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="ABILITY Logo">
+                    <span>ABILITY</span>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#pillars">Initiatives</a></li>
+                    <li><a href="index.html#roadmap">Roadmap</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="english-championship.html" class="btn btn-outline">English Championship</a>
+                    <a href="register.html" class="btn btn-primary active">Register</a>
+                </div>
+
+                <div class="menu-btn" id="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= REGISTRATION FORM SECTION ================= -->
+    <section class="registration-section">
+        <div class="container">
+            
+            <div class="section-title-wrapper" style="text-align: center; width: 100%; margin: 0 auto 30px auto;">
+                <span class="styled-section-tag" style="margin: 0 auto 10px auto;">JOIN THE CHAMPIONSHIP</span>
+                <h2 class="main-section-heading" style="text-align: center;">Official Event <span>Registration</span></h2>
+                <p class="section-subtext" style="text-align: center;">Fill in all details below. Your registration will be verified by the admin team.</p>
+            </div>
+
+            <div class="registration-card-wrapper">
+                <form id="registrationForm" class="registration-form">
+                    
+                    <!-- STEP 1: PERSONAL INFORMATION -->
+                    <div class="form-step-block">
+                        <h3 class="form-step-title"><span>01.</span> Personal & Academic Information</h3>
+                        
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="e.g. Tanvir Ahmed" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="phone">Phone / WhatsApp Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g. 01700000000" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="e.g. tanvir@gmail.com" required>
+                            </div>
+
+                            <!-- EXACT 5 BATCH OPTIONS -->
+                            <div class="input-group">
+                                <label for="batch">Academic Batch <span class="required">*</span></label>
+                                <select id="batch" name="batch" required>
+                                    <option value="" disabled selected>Select your batch</option>
+                                    <option value="Class 8">Class 8</option>
+                                    <option value="Class 9">Class 9</option>
+                                    <option value="Class 10">Class 10</option>
+                                    <option value="HSC 1st Year">HSC 1st Year</option>
+                                    <option value="HSC 2nd Year">HSC 2nd Year</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group full-width">
+                                <label for="institution">Institution Name <span class="required">*</span></label>
+                                <input type="text" id="institution" name="institution" placeholder="e.g. Dinajpur Zilla School" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: SINGLE SEGMENT SELECTION (RADIO BUTTONS) -->
+                    <div class="form-step-block">
+                        <h3 class="form-step-title"><span>02.</span> Select Championship Segment <span class="required">*</span></h3>
+                        <p class="form-step-subtitle">Participants can choose exactly <strong>ONE</strong> segment to participate in.</p>
+
+                        <div class="checkbox-segments-grid">
+                            
+                            <!-- SEGMENT 1 -->
+                            <label class="segment-checkbox-card">
+                                <input type="radio" name="segment" value="Grand Title Championship" required>
+                                <div class="segment-info">
+                                    <h4>Grand Title Championship</h4>
+                                    <p>Batch Olympiad & Title Path Written Test (Mr. & Miss Englishpedia 2026)</p>
+                                </div>
+                            </label>
+
+                            <!-- SEGMENT 2 -->
+                            <label class="segment-checkbox-card">
+                                <input type="radio" name="segment" value="English Public Speaking" required>
+                                <div class="segment-info">
+                                    <h4>English Public Speaking</h4>
+                                    <p>3-Minute Stage Speech on Instant Topics</p>
+                                </div>
+                            </label>
+
+                            <!-- SEGMENT 3 -->
+                            <label class="segment-checkbox-card">
+                                <input type="radio" name="segment" value="Literature Writing" required>
+                                <div class="segment-info">
+                                    <h4>Literature Writing</h4>
+                                    <p>Short Story or Poetry Submission & Stage Recitation</p>
+                                </div>
+                            </label>
+
+                            <!-- SEGMENT 4 (TEAM) -->
+                            <label class="segment-checkbox-card">
+                                <input type="radio" id="teamCaseSolvingRadio" name="segment" value="Team Case Solving" required>
+                                <div class="segment-info">
+                                    <h4>Team Case Solving Competition</h4>
+                                    <p>Poster Presentation & 3-Minute Stage Pitch (2–3 Members)</p>
+                                </div>
+                            </label>
+
+                        </div>
+
+                        <!-- DYNAMIC TEAM DETAILS (SHOWN WHEN TEAM CASE SOLVING IS SELECTED) -->
+                        <div id="teamDetailsBlock" class="team-details-block" style="display: none;">
+                            <h4 class="team-block-title">👥 Team Information</h4>
+                            <div class="form-grid">
+                                <div class="input-group full-width">
+                                    <label for="teamName">Team Name <span class="required">*</span></label>
+                                    <input type="text" id="teamName" name="teamName" placeholder="e.g. Dinajpur Innovators">
+                                </div>
+                                <div class="input-group">
+                                    <label for="member2">Member 2 Name & Contact <span class="required">*</span></label>
+                                    <input type="text" id="member2" name="member2" placeholder="Name & Phone No.">
+                                </div>
+                                <div class="input-group">
+                                    <label for="member3">Member 3 Name & Contact (Optional)</label>
+                                    <input type="text" id="member3" name="member3" placeholder="Name & Phone No.">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- STEP 3: PAYMENT DETAILS (BKASH & ROCKET) -->
+                    <div class="form-step-block">
+                        <h3 class="form-step-title"><span>03.</span> Payment Details <span class="required">*</span></h3>
+                        
+                        <div class="payment-notice-card">
+                            <div class="payment-method">
+                                <span class="method-badge bkash">bKash</span>
+                                <span class="method-badge rocket">Rocket</span>
+                                <strong>Personal Number:</strong> <code>01713770802</code>
+                            </div>
+                            <p class="payment-note">Send Money the registration fee to <strong>01713770802</strong> via bKash/Rocket before submitting.</p>
+                        </div>
+
+                        <div class="form-grid" style="margin-top: 18px;">
+                            <div class="input-group">
+                                <label for="paymentNumber">Sender Mobile Number <span class="required">*</span></label>
+                                <input type="tel" id="paymentNumber" name="paymentNumber" placeholder="bKash/Rocket Sender Number" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="trxId">Transaction ID (TrxID) <span class="required">*</span></label>
+                                <input type="text" id="trxId" name="trxId" placeholder="e.g. BAX8912KL" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="form-submit-wrapper text-center">
+                        <button type="submit" id="submitBtn" class="btn btn-primary btn-large btn-full">Submit Registration</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="ABILITY Logo">
+                        <span>ABILITY</span>
+                    </a>
+                    <p>AimXcel Bangladesh Institute for Learning, Innovation & Transformative Youth</p>
+                    <span>Dinajpur, Rangpur Division, Bangladesh</span>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#pillars">Pillars</a></li>
+                        <li><a href="english-championship.html">English Championship</a></li>
+                        <li><a href="index.html#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><strong>Headquarters:</strong> Moddho Balubari (Food office Road), Sadar, Dinajpur</p>
+                    <p><strong>Email:</strong> abilityofficial.2026@gmail.com</p>
+                    <p><strong>Founder:</strong> Nobel Mahfuz (01758418919)</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ABILITY. All Rights Reserved. "Recognizing Excellence, Inspiring Futures."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // TOGGLE TEAM DETAILS AND ENFORCE RADIO BUTTON VALIDATION
+        const segmentRadios = document.querySelectorAll('input[name="segment"]');
+        const teamDetailsBlock = document.getElementById('teamDetailsBlock');
+        const teamNameInput = document.getElementById('teamName');
+        const member2Input = document.getElementById('member2');
+
+        segmentRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'Team Case Solving') {
+                    teamDetailsBlock.style.display = 'block';
+                    teamNameInput.required = true;
+                    member2Input.required = true;
+                } else {
+                    teamDetailsBlock.style.display = 'none';
+                    teamNameInput.required = false;
+                    member2Input.required = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

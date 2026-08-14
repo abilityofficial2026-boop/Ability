@@ -1,0 +1,1141 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 900 900"
+fill="none">
+
+<defs>
+
+<linearGradient id="bgGlow" x1="0" y1="0" x2="900" y2="900">
+
+<stop offset="0%" stop-color="#0F1F39"/>
+
+<stop offset="100%" stop-color="#071221"/>
+
+</linearGradient>
+
+<linearGradient id="blueGradient"
+
+x1="0"
+
+y1="0"
+
+x2="1"
+
+y2="1">
+
+<stop offset="0%"
+
+stop-color="#66A9FF"/>
+
+<stop offset="100%"
+
+stop-color="#256DFF"/>
+
+</linearGradient>
+
+<linearGradient id="goldGradient"
+
+x1="0"
+
+y1="0"
+
+x2="1"
+
+y2="1">
+
+<stop offset="0%"
+
+stop-color="#FFE082"/>
+
+<stop offset="100%"
+
+stop-color="#FFD54F"/>
+
+</linearGradient>
+
+<filter id="softGlow"
+
+x="-100%"
+
+y="-100%"
+
+width="300%"
+
+height="300%">
+
+<feGaussianBlur
+
+stdDeviation="12"
+
+result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+<filter id="strongGlow"
+
+x="-150%"
+
+y="-150%"
+
+width="400%"
+
+height="400%">
+
+<feGaussianBlur
+
+stdDeviation="22"
+
+result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+</defs>
+
+<!-- Ambient Glow -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="330"
+
+fill="url(#bgGlow)"
+
+opacity=".22"/>
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="250"
+
+fill="#256DFF"
+
+opacity=".06"/>
+
+<!-- Outer Ring -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="245"
+
+stroke="#2957A8"
+
+stroke-width="1.2"
+
+opacity=".25"/>
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="210"
+
+stroke="#4E8CFF"
+
+stroke-width="1"
+
+opacity=".18"/>
+
+<!-- Network Curves -->
+
+<path
+
+d="M450 240
+C310 240
+240 310
+240 450"
+
+stroke="#2F6BFF"
+
+stroke-width="3"
+
+stroke-linecap="round"
+
+opacity=".35"/>
+
+<path
+
+d="M450 240
+C590 240
+660 310
+660 450"
+
+stroke="#2F6BFF"
+
+stroke-width="3"
+
+stroke-linecap="round"
+
+opacity=".35"/>
+
+<path
+
+d="M450 660
+C310 660
+240 590
+240 450"
+
+stroke="#2F6BFF"
+
+stroke-width="3"
+
+stroke-linecap="round"
+
+opacity=".35"/>
+
+<path
+
+d="M450 660
+C590 660
+660 590
+660 450"
+
+stroke="#2F6BFF"
+
+stroke-width="3"
+
+stroke-linecap="round"
+
+opacity=".35"/>
+
+<!-- Central Glow -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="86"
+
+fill="#3B82F6"
+
+opacity=".16"
+
+filter="url(#strongGlow)"/>
+
+<!-- Main Hub -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="74"
+
+fill="#0F213A"
+
+stroke="url(#blueGradient)"
+
+stroke-width="4"/>
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="58"
+
+fill="#132B4D"
+
+stroke="#8BC2FF"
+
+stroke-width="1.2"
+
+opacity=".95"/>
+
+<!-- Orbital Ring -->
+
+<circle
+
+cx="450"
+
+cy="450"
+
+r="92"
+
+stroke="#5EA2FF"
+
+stroke-width="2"
+
+stroke-dasharray="7 9"
+
+opacity=".30"/>
+
+<!-- Center Star -->
+
+<path
+
+d="M450 412
+L459 438
+L486 438
+L464 454
+L472 480
+L450 464
+L428 480
+L436 454
+L414 438
+L441 438Z"
+
+fill="url(#goldGradient)"
+
+filter="url(#softGlow)"/>
+
+<!-- Center Label -->
+
+<text
+
+x="450"
+
+y="525"
+
+fill="#FFFFFF"
+
+font-size="18"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="700"
+
+text-anchor="middle"
+
+letter-spacing="2">
+
+ABILITY
+
+</text>
+
+<!-- Connection Nodes -->
+
+<circle cx="450" cy="240" r="7"
+
+fill="#FFD54F"/>
+
+<circle cx="660" cy="450" r="7"
+
+fill="#FFD54F"/>
+
+<circle cx="450" cy="660" r="7"
+
+fill="#FFD54F"/>
+
+<circle cx="240" cy="450" r="7"
+
+fill="#FFD54F"/>
+
+<!-- TOP LEFT MODULE STARTS -->
+
+<!-- Module Base -->
+
+<circle
+
+cx="285"
+
+cy="285"
+
+r="62"
+
+fill="#10233F"
+
+stroke="url(#blueGradient)"
+
+stroke-width="3"/>
+
+<circle
+
+cx="285"
+
+cy="285"
+
+r="74"
+
+stroke="#4A8EFF"
+
+stroke-width="1.2"
+
+opacity=".22"/>
+
+<!-- Trophy -->
+
+<path
+
+d="M270 255
+
+H300
+
+V270
+
+C300 286 292 296 285 300
+
+C278 296 270 286 270 270Z"
+
+fill="url(#goldGradient)"/>
+
+<path
+
+d="M274 300
+
+H296
+
+V308
+
+H274Z"
+
+fill="#FFD54F"/>
+
+<rect
+
+x="279"
+
+y="308"
+
+width="12"
+
+height="10"
+
+rx="2"
+
+fill="#FFD54F"/>
+
+<rect
+
+x="272"
+
+y="318"
+
+width="26"
+
+height="6"
+
+rx="3"
+
+fill="#FFD54F"/>
+
+<!-- Trophy Handles -->
+
+<path
+
+d="M270 260
+
+C260 260 258 272 268 278"
+
+stroke="#FFD54F"
+
+stroke-width="3"
+
+stroke-linecap="round"/>
+
+<path
+
+d="M300 260
+
+C310 260 312 272 302 278"
+
+stroke="#FFD54F"
+
+stroke-width="3"
+
+stroke-linecap="round"/>
+
+<!-- Star -->
+
+<path
+
+d="M285 238
+
+L289 248
+
+L300 248
+
+L291 254
+
+L295 264
+
+L285 258
+
+L275 264
+
+L279 254
+
+L270 248
+
+L281 248Z"
+
+fill="#FFFFFF"
+
+opacity=".95"/>
+
+<!-- Label -->
+
+<text
+
+x="285"
+
+y="352"
+
+fill="#FFFFFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Academic
+
+</text>
+
+<text
+
+x="285"
+
+y="370"
+
+fill="#AFCBFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Excellence
+
+</text>
+
+<!-- TOP RIGHT MODULE STARTS -->
+
+<circle
+
+cx="615"
+
+cy="285"
+
+r="62"
+
+fill="#10233F"
+
+stroke="url(#blueGradient)"
+
+stroke-width="3"/>
+
+<circle
+
+cx="615"
+
+cy="285"
+
+r="74"
+
+stroke="#4A8EFF"
+
+stroke-width="1.2"
+
+opacity=".22"/>
+
+<!-- Atom -->
+
+<ellipse
+
+cx="615"
+
+cy="285"
+
+rx="24"
+
+ry="10"
+
+stroke="#8BC2FF"
+
+stroke-width="2"
+
+fill="none"/>
+
+<ellipse
+
+cx="615"
+
+cy="285"
+
+rx="10"
+
+ry="24"
+
+stroke="#8BC2FF"
+
+stroke-width="2"
+
+fill="none"/>
+
+<ellipse
+
+cx="615"
+
+cy="285"
+
+rx="22"
+
+ry="22"
+
+transform="rotate(45 615 285)"
+
+stroke="#8BC2FF"
+
+stroke-width="2"
+
+fill="none"/>
+
+<circle
+
+cx="615"
+
+cy="285"
+
+r="6"
+
+fill="#FFD54F"/>
+
+<!-- Flask -->
+
+<path
+
+d="M603 314
+
+L627 314
+
+L621 298
+
+V276
+
+H609
+
+V298Z"
+
+fill="#5EA2FF"
+
+opacity=".95"/>
+
+<path
+
+d="M608 303
+
+H622"
+
+stroke="#FFFFFF"
+
+stroke-width="2"
+
+stroke-linecap="round"/>
+
+<!-- Label -->
+
+<text
+
+x="615"
+
+y="352"
+
+fill="#FFFFFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Science
+
+</text>
+
+<text
+
+x="615"
+
+y="370"
+
+fill="#AFCBFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Laboratory
+
+</text>
+
+<!-- BOTTOM LEFT MODULE STARTS -->
+
+<circle
+
+cx="285"
+
+cy="615"
+
+r="62"
+
+fill="#10233F"
+
+stroke="url(#blueGradient)"
+
+stroke-width="3"/>
+
+<circle
+
+cx="285"
+
+cy="615"
+
+r="74"
+
+stroke="#4A8EFF"
+
+stroke-width="1.2"
+
+opacity=".22"/>
+
+<!-- School -->
+
+<rect
+
+x="262"
+
+y="598"
+
+width="46"
+
+height="30"
+
+rx="4"
+
+fill="#5EA2FF"/>
+
+<polygon
+
+points="258,598 285,580 312,598"
+
+fill="#8BC2FF"/>
+
+<rect
+
+x="280"
+
+y="610"
+
+width="10"
+
+height="18"
+
+rx="2"
+
+fill="#10233F"/>
+
+<rect
+
+x="268"
+
+y="605"
+
+width="7"
+
+height="7"
+
+rx="1"
+
+fill="#FFFFFF"/>
+
+<rect
+
+x="295"
+
+y="605"
+
+width="7"
+
+height="7"
+
+rx="1"
+
+fill="#FFFFFF"/>
+
+<!-- Tree -->
+
+<circle
+
+cx="250"
+
+cy="612"
+
+r="8"
+
+fill="#FFD54F"/>
+
+<rect
+
+x="248"
+
+y="620"
+
+width="4"
+
+height="8"
+
+fill="#8B6A32"/>
+
+<!-- Connection Node -->
+
+<circle
+
+cx="320"
+
+cy="594"
+
+r="5"
+
+fill="#FFD54F"/>
+
+<line
+
+x1="308"
+
+y1="600"
+
+x2="320"
+
+y2="594"
+
+stroke="#8BC2FF"
+
+stroke-width="2"/>
+
+<!-- Label -->
+
+<text
+
+x="285"
+
+y="682"
+
+fill="#FFFFFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Rural
+
+</text>
+
+<text
+
+x="285"
+
+y="700"
+
+fill="#AFCBFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Education
+
+</text>
+
+<!-- BOTTOM RIGHT MODULE STARTS -->
+
+<circle
+
+cx="615"
+
+cy="615"
+
+r="62"
+
+fill="#10233F"
+
+stroke="url(#blueGradient)"
+
+stroke-width="3"/>
+
+<circle
+
+cx="615"
+
+cy="615"
+
+r="74"
+
+stroke="#4A8EFF"
+
+stroke-width="1.2"
+
+opacity=".22"/>
+
+<!-- AI Chip -->
+
+<rect
+
+x="595"
+
+y="595"
+
+width="40"
+
+height="40"
+
+rx="6"
+
+fill="#5EA2FF"/>
+
+<rect
+
+x="605"
+
+y="605"
+
+width="20"
+
+height="20"
+
+rx="3"
+
+fill="#10233F"/>
+
+<!-- Chip Pins -->
+
+<line x1="590" y1="603" x2="595" y2="603" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="590" y1="615" x2="595" y2="615" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="590" y1="627" x2="595" y2="627" stroke="#8BC2FF" stroke-width="2"/>
+
+<line x1="635" y1="603" x2="640" y2="603" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="635" y1="615" x2="640" y2="615" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="635" y1="627" x2="640" y2="627" stroke="#8BC2FF" stroke-width="2"/>
+
+<line x1="603" y1="590" x2="603" y2="595" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="615" y1="590" x2="615" y2="595" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="627" y1="590" x2="627" y2="595" stroke="#8BC2FF" stroke-width="2"/>
+
+<line x1="603" y1="635" x2="603" y2="640" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="615" y1="635" x2="615" y2="640" stroke="#8BC2FF" stroke-width="2"/>
+<line x1="627" y1="635" x2="627" y2="640" stroke="#8BC2FF" stroke-width="2"/>
+
+<!-- Label -->
+
+<text
+
+x="615"
+
+y="682"
+
+fill="#FFFFFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Future
+
+</text>
+
+<text
+
+x="615"
+
+y="700"
+
+fill="#AFCBFF"
+
+font-size="13"
+
+font-family="Inter,Arial,sans-serif"
+
+font-weight="600"
+
+text-anchor="middle">
+
+Skills
+
+</text>
+
+<!-- PARTICLES START -->
+
+<circle cx="356" cy="205" r="2.5" fill="#8BC2FF" opacity=".75"/>
+<circle cx="402" cy="176" r="1.8" fill="#FFFFFF" opacity=".65"/>
+<circle cx="515" cy="186" r="2.2" fill="#8BC2FF" opacity=".72"/>
+<circle cx="548" cy="222" r="1.8" fill="#FFD54F" opacity=".9"/>
+
+<circle cx="694" cy="364" r="2.4" fill="#8BC2FF" opacity=".65"/>
+<circle cx="716" cy="442" r="2.1" fill="#FFFFFF" opacity=".60"/>
+<circle cx="694" cy="526" r="2.6" fill="#8BC2FF" opacity=".70"/>
+
+<circle cx="542" cy="714" r="2.3" fill="#FFD54F" opacity=".85"/>
+<circle cx="455" cy="748" r="2.2" fill="#8BC2FF" opacity=".70"/>
+<circle cx="372" cy="714" r="2.5" fill="#FFFFFF" opacity=".60"/>
+
+<circle cx="205" cy="534" r="2.4" fill="#8BC2FF" opacity=".72"/>
+<circle cx="182" cy="448" r="2.2" fill="#FFFFFF" opacity=".60"/>
+<circle cx="204" cy="362" r="2.5" fill="#FFD54F" opacity=".82"/>
+
+<!-- Small Floating Glow Rings -->
+
+<circle
+cx="355"
+cy="206"
+r="8"
+stroke="#5EA2FF"
+stroke-width=".8"
+opacity=".22"/>
+
+<circle
+cx="545"
+cy="221"
+r="9"
+stroke="#5EA2FF"
+stroke-width=".8"
+opacity=".22"/>
+
+<circle
+cx="695"
+cy="525"
+r="8"
+stroke="#5EA2FF"
+stroke-width=".8"
+opacity=".22"/>
+
+<circle
+cx="206"
+cy="362"
+r="8"
+stroke="#5EA2FF"
+stroke-width=".8"
+opacity=".22"/>
+
+<!-- Decorative Connection Dots -->
+
+<circle cx="450" cy="175" r="3" fill="#8BC2FF"/>
+<circle cx="725" cy="450" r="3" fill="#8BC2FF"/>
+<circle cx="450" cy="725" r="3" fill="#8BC2FF"/>
+<circle cx="175" cy="450" r="3" fill="#8BC2FF"/>
+
+<!-- Soft Ambient Stars -->
+
+<path
+d="M128 265
+L130 270
+L135 270
+L131 273
+L133 278
+L128 275
+L123 278
+L125 273
+L121 270
+L126 270Z"
+fill="#FFFFFF"
+opacity=".45"/>
+
+<path
+d="M758 250
+L760 255
+L765 255
+L761 258
+L763 263
+L758 260
+L753 263
+L755 258
+L751 255
+L756 255Z"
+fill="#FFFFFF"
+opacity=".45"/>
+
+<path
+d="M760 640
+L762 645
+L767 645
+L763 648
+L765 653
+L760 650
+L755 653
+L757 648
+L753 645
+L758 645Z"
+fill="#FFFFFF"
+opacity=".45"/>
+
+<path
+d="M140 640
+L142 645
+L147 645
+L143 648
+L145 653
+L140 650
+L135 653
+L137 648
+L133 645
+L138 645Z"
+fill="#FFFFFF"
+opacity=".45"/>
+
+<!-- Outer Decorative Ring -->
+
+<circle
+cx="450"
+cy="450"
+r="315"
+stroke="#1F4F9E"
+stroke-width=".8"
+stroke-dasharray="2 12"
+opacity=".12"/>
+
+<!-- END -->
+
+</svg>

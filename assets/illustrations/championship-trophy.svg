@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <defs>
+    <!-- Master Gradients & Lighting -->
+    <radialGradient id="deepCanvas" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#0E1A36"/>
+      <stop offset="50%" stop-color="#071126"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    <radialGradient id="ambientBlueGlow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#2563FF" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#2563FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#071126" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldCoreGlow" cx="50%" cy="32%" r="40%">
+      <stop offset="0%" stop-color="#F5C15D" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F5C15D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Premium Glass & Metal Gradients -->
+    <linearGradient id="glassEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#7FB2FF" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#2563FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="glassSurface" x1="200" y1="160" x2="500" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32"/>
+      <stop offset="25%" stop-color="#7FB2FF" stop-opacity="0.14"/>
+      <stop offset="65%" stop-color="#2563FF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="prestigiousGold" x1="200" y1="180" x2="500" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF8E7"/>
+      <stop offset="25%" stop-color="#FFE082"/>
+      <stop offset="55%" stop-color="#F5C15D"/>
+      <stop offset="100%" stop-color="#9A6500"/>
+    </linearGradient>
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2CC"/>
+      <stop offset="100%" stop-color="#D49E24"/>
+    </linearGradient>
+
+    <!-- Sophisticated Filters -->
+    <filter id="ultraBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0.08   0 0 0 0 0.3   0 0 0 0.7 0"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Reusable Star Element -->
+    <g id="prestigeStar">
+      <path d="M 0 -7 L 2 -2 L 7 0 L 2 2 L 0 7 L -2 2 L -7 0 L -2 -2 Z" fill="#F5C15D" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- Reusable Symmetric Laurel Leaf -->
+    <g id="laurelLeaf">
+      <path d="M 0 0 C 8 -4, 12 -12, 8 -20 C 4 -12, 0 -8, 0 0 Z" fill="#7FB2FF" opacity="0.65" stroke="url(#glassEdge)" stroke-width="0.4"/>
+    </g>
+  </defs>
+
+  <!-- 1. BACKGROUND LAYER -->
+  <g id="Background-Layer">
+    <rect width="700" height="700" fill="url(#deepCanvas)"/>
+    <circle cx="350" cy="330" r="300" fill="url(#ambientBlueGlow)" filter="url(#ultraBlur)"/>
+    <circle cx="350" cy="300" r="180" fill="url(#goldCoreGlow)" filter="url(#ultraBlur)">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 2. ORBITAL SYSTEMS LAYER -->
+  <g id="Orbital-Layer">
+    <g transform="rotate(-15 350 320)">
+      <ellipse cx="350" cy="320" rx="230" ry="75" fill="none" stroke="url(#glassEdge)" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="6 10"/>
+      <circle r="4.5" fill="#F5C15D" filter="url(#softGlow)">
+        <animateMotion path="M 350 320 m -230 0 a 230 75 0 1 0 460 0 a 230 75 0 1 0 -460 0" dur="15s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="rotate(20 350 320)">
+      <ellipse cx="350" cy="320" rx="255" ry="85" fill="none" stroke="#7FB2FF" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="4 14"/>
+      <circle r="4" fill="#7FB2FF" filter="url(#softGlow)">
+        <animateMotion path="M 350 320 m -255 0 a 255 85 0 1 0 510 0 a 255 85 0 1 0 -510 0" dur="20s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- 3. ACADEMIC LAURELS & EMBELLISHMENTS LAYER -->
+  <g id="Embellishments-Layer">
+    <!-- Symmetric Laurel Wreath -->
+    <g opacity="0.85">
+      <!-- Left Wreath Branch -->
+      <use href="#laurelLeaf" transform="translate(245, 410) rotate(-35)"/>
+      <use href="#laurelLeaf" transform="translate(230, 370) rotate(-55)"/>
+      <use href="#laurelLeaf" transform="translate(235, 330) rotate(-75)"/>
+      <use href="#laurelLeaf" transform="translate(255, 295) rotate(-95)"/>
+      <use href="#laurelLeaf" transform="translate(285, 268) rotate(-115)"/>
+      <!-- Right Wreath Branch (Symmetric scale) -->
+      <use href="#laurelLeaf" transform="translate(455, 410) scale(-1, 1) rotate(-35)"/>
+      <use href="#laurelLeaf" transform="translate(470, 370) scale(-1, 1) rotate(-55)"/>
+      <use href="#laurelLeaf" transform="translate(465, 330) scale(-1, 1) rotate(-75)"/>
+      <use href="#laurelLeaf" transform="translate(445, 295) scale(-1, 1) rotate(-95)"/>
+      <use href="#laurelLeaf" transform="translate(415, 268) scale(-1, 1) rotate(-115)"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -4; 0 0" dur="6s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Floating Prestige Stars -->
+    <use href="#prestigeStar" x="175" y="195"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></use>
+    <use href="#prestigeStar" x="525" y="195" transform="scale(0.85)"><animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/></use>
+    <use href="#prestigeStar" x="210" y="445" transform="scale(0.7)"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.5s" repeatCount="indefinite"/></use>
+    <use href="#prestigeStar" x="490" y="445" transform="scale(0.75)"><animate attributeName="opacity" values="0.8;0.3;0.8" dur="4.5s" repeatCount="indefinite"/></use>
+  </g>
+
+  <!-- 4. MASTER TROPHY LAYER -->
+  <g id="Trophy-Layer">
+    <!-- Floating Wrapper -->
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="6s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Trophy Ground Shadow -->
+    <ellipse cx="350" cy="540" rx="85" ry="15" fill="#030712" filter="url(#ultraBlur)" opacity="0.8">
+      <animate attributeName="rx" values="85;70;85" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Geometric Symmetric Pedestal -->
+    <g id="Pedestal">
+      <!-- Base Tier -->
+      <path d="M 280 520 L 420 520 L 445 540 L 255 540 Z" fill="url(#glassSurface)" stroke="url(#glassEdge)" stroke-width="1.5"/>
+      <!-- Column Tier -->
+      <path d="M 315 460 L 385 460 L 392 520 L 308 520 Z" fill="#071126" fill-opacity="0.75" stroke="url(#glassEdge)" stroke-width="1.5"/>
+      <!-- Golden Accent Crown -->
+      <rect x="310" y="454" width="80" height="8" rx="3" fill="url(#prestigiousGold)" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- Futuristic Glassmorphic Trophy Cup -->
+    <g id="Cup">
+      <!-- Symmetric Architectural Handles -->
+      <path d="M 265 235 C 205 235, 205 365, 275 395" fill="none" stroke="url(#goldHighlight)" stroke-width="3" filter="url(#softGlow)"/>
+      <path d="M 435 235 C 495 235, 495 365, 425 395" fill="none" stroke="url(#goldHighlight)" stroke-width="3" filter="url(#softGlow)"/>
+      
+      <!-- Main Glass Body -->
+      <path d="M 255 205 L 445 205 L 405 405 C 400 438, 378 452, 350 452 C 322 452, 300 438, 295 405 Z" fill="url(#glassSurface)" stroke="url(#glassEdge)" stroke-width="2.5" filter="url(#dropShadow)"/>
+
+      <!-- Inner Liquid / Prestigious Gold Core -->
+      <path d="M 272 220 L 428 220 L 394 398 C 391 422, 374 436, 350 436 C 326 436, 309 422, 306 398 Z" fill="url(#prestigiousGold)" opacity="0.9"/>
+      
+      <!-- Cup Rim & Structural Collars -->
+      <ellipse cx="350" cy="205" rx="95" ry="12" fill="none" stroke="url(#glassEdge)" stroke-width="3.5"/>
+      <ellipse cx="350" cy="205" rx="80" ry="8" fill="url(#goldHighlight)"/>
+
+      <!-- Center Prestige Emblem (Ability Academic Crest) -->
+      <g transform="translate(350, 315)">
+        <circle cx="0" cy="0" r="34" fill="#071126" stroke="url(#prestigiousGold)" stroke-width="3" filter="url(#softGlow)"/>
+        <!-- Central Rotating Star Motif -->
+        <path d="M 0 -18 L 4.5 -5.5 L 17 -3.5 L 7.5 5.5 L 10 18 L 0 11 L -10 18 L -7.5 5.5 L -17 -3.5 L -4.5 -5.5 Z" fill="url(#goldHighlight)">
+          <animateTransform attributeName="transform" type="rotate" values="0;360" dur="25s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+
+    <!-- Master Specular Highlights -->
+    <path d="M 272 220 L 308 402 C 306 422, 314 432, 324 440 C 314 425, 302 402, 285 220 Z" fill="#FFFFFF" opacity="0.45"/>
+    <path d="M 412 220 L 438 315 C 422 305, 395 295, 365 295 Z" fill="#FFFFFF" opacity="0.3"/>
+  </g>
+
+  <!-- 5. PLATFORM LAYER -->
+  <g id="Platform-Layer">
+    <!-- Dynamic Base Glow -->
+    <ellipse cx="350" cy="610" rx="230" ry="25" fill="#2563FF" filter="url(#ultraBlur)" opacity="0.75">
+      <animate attributeName="rx" values="230;250;230" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0.95;0.75" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Main Circular Platform -->
+    <ellipse cx="350" cy="595" rx="200" ry="42" fill="#071126" stroke="url(#glassEdge)" stroke-width="2.5" filter="url(#softGlow)"/>
+    <ellipse cx="350" cy="591" rx="180" ry="34" fill="none" stroke="#2563FF" stroke-width="2" opacity="0.85"/>
+    
+    <!-- Platform Metallic Rim Light -->
+    <path d="M 150 595 C 150 616, 550 616, 550 595" fill="none" stroke="url(#goldHighlight)" stroke-width="1.8" opacity="0.7"/>
+  </g>
+
+  <!-- 6. FOREGROUND LIGHTING & AMBIENT LAYER -->
+  <g id="Lighting-Layer" pointer-events="none">
+    <circle cx="350" cy="320" r="190" fill="url(#goldCoreGlow)" filter="url(#ultraBlur)" opacity="0.5">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
