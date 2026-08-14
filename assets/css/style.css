@@ -2499,111 +2499,162 @@ REGISTRATION FORM STYLES
   }
 }
 /* ====================================================
-   HEADER & MOBILE OVERLAPPING FIX (PERMANENT)
+   NAVBAR & HEADER FIX (DESKTOP + MOBILE)
 ==================================================== */
 
-/* 1. Header is normal at top, scrolls away naturally */
+/* Desktop Header Base */
 .header {
-  position: absolute !important;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: transparent !important;
-  box-shadow: none !important;
+  padding: 20px 0;
+  background: transparent;
 }
 
-/* Clear top spacing so first section text is NOT covered */
-.hero, .page-hero {
-  padding-top: 110px !important;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* 2. Mobile Specific Overrides */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo img {
+  height: 38px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #aebbd0;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #ffffff;
+}
+
+/* Hide mobile-only links on Desktop */
+.mobile-only-link {
+  display: none !important;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* Mobile responsive styles */
 @media (max-width: 992px) {
   
-  .header {
-    padding: 15px 0 !important;
+  .hero, .page-hero {
+    padding-top: 100px !important;
   }
 
-  /* Navigation Drawer */
-  .navbar .nav-menu {
-    position: fixed !important;
-    top: 0 !important;
-    left: -100% !important;
-    width: 80% !important;
-    max-width: 320px !important;
-    height: 100vh !important;
-    background: #07111f !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    padding: 80px 25px 30px 25px !important;
-    gap: 16px !important;
-    transition: left 0.3s ease-in-out !important;
-    z-index: 9999 !important;
-    box-shadow: 10px 0 30px rgba(0,0,0,0.8);
-  }
-
-  .navbar .nav-menu.active {
-    left: 0 !important;
-  }
-
-  .nav-menu li {
-    width: 100%;
-  }
-
-  .nav-menu li a {
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    display: block;
-    padding: 8px 0;
-  }
-
-  /* Hamburger Icon */
   .menu-btn {
     display: flex !important;
-    z-index: 10000 !important;
-  }
-
-  /* Mobile Extra Navigation Buttons Inside Menu */
-  .mobile-menu-actions {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10001;
   }
 
-  /* Orbit Knowledge Network Mobile Clean Layout */
+  .menu-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #07111f;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 25px 40px 25px;
+    gap: 18px;
+    transition: right 0.3s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+    z-index: 10000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .mobile-only-link {
+    display: block !important;
+    width: 100%;
+  }
+
+  .nav-buttons {
+    display: none !important; /* Hidden on header bar for mobile */
+  }
+
+  /* Restore Original Knowledge Network Orbit for Mobile */
   .hero-visual {
-    min-height: auto !important;
-    margin-top: 30px !important;
+    min-height: 380px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .knowledge-network {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    height: auto !important;
-    position: static !important;
+    display: block !important;
+    position: relative !important;
+    width: 320px !important;
+    height: 320px !important;
+    margin: 0 auto !important;
+    transform: scale(0.85);
   }
 
   .network-node {
-    position: static !important;
-    width: 100% !important;
-    transform: none !important;
-    background: rgba(16, 27, 45, 0.8) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px !important;
-    padding: 12px !important;
+    position: absolute !important;
+    width: 120px !important;
+    padding: 8px !important;
   }
 
-  .network-center, .line-1, .line-2, .line-3, .line-4 {
-    display: none !important; /* Hide floating orb on small screens for clean view */
+  .network-center {
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
   }
 }
